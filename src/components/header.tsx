@@ -18,7 +18,7 @@ export const Header = () => {
         className="flex h-full items-center justify-between"
       >
         <Logo />
-        <Suspense fallback="loading...">
+        <Suspense fallback="">
           <Navbar />
           <MobileMenu />
         </Suspense>
