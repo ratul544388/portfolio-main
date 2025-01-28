@@ -1,3 +1,4 @@
+"use client";
 import {
   Carousel,
   CarouselContent,
@@ -11,11 +12,16 @@ import { reviews } from "@/constants";
 import Image from "next/image";
 import { Container } from "./container";
 import { WhileInView } from "./while-in-view";
+import { SectionHeading } from "./section-heading";
+import { Star } from "lucide-react";
 
 export const Reviews = () => {
   return (
-    <section className="mt-28 w-full select-none bg-foreground pb-16 pt-48 text-white [clip-path:polygon(32%_0,100%_17%,100%_100%,0_99%,0_19%)] lg:[clip-path:polygon(14%_0,100%_16%,100%_100%,0%_100%)]">
-      <WhileInView y={100}>
+    <section className="mt-28 w-full select-none bg-foreground pb-24 pt-20 text-white [clip-path:polygon(32%_0,100%_17%,100%_100%,0_99%,0_19%)] lg:[clip-path:polygon(14%_0,100%_16%,100%_100%,0%_100%)]">
+      <SectionHeading icon={Star} className="text-primary">
+        Reviews
+      </SectionHeading>
+      <WhileInView y={100} className="mt-10">
         <Container>
           <Carousel
             plugins={[
@@ -50,13 +56,13 @@ export const Reviews = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="absolute -top-6 left-1/2 z-20 flex -translate-x-1/2 gap-3">
+            <div className="absolute -bottom-10 left-1/2 z-20 flex -translate-x-1/2 gap-3">
               <CarouselPrevious
-                className="text-slate-300 hover:bg-transparent hover:text-white"
+                className="bg-background/10 hover:bg-background/20 hover:text-white"
                 variant="ghost"
               />
               <CarouselNext
-                className="text-slate-300 hover:bg-transparent hover:text-white"
+                className="bg-background/10 hover:bg-background/20 hover:text-white"
                 variant="ghost"
               />
             </div>

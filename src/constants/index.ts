@@ -1,4 +1,4 @@
-import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaBriefcase, FaFacebook, FaGithub, FaHome, FaLightbulb, FaLinkedin, FaPhoneAlt, FaRocket, FaTwitter } from "react-icons/fa";
 
 export const myTwitterLink = "https://twitter.com/Ratul2582";
 export const myGithubLink = "https://github.com/ratul544388";
@@ -10,47 +10,55 @@ export const myAddress = "Keranigonj Dhaka 1310, Bangladesh";
 export const myPhone = "+8801815555105";
 export const myFiverrLink = "https://www.fiverr.com/ratul544";
 
+import blogAppImage from "@/../public/projects/blog-app.webp";
+import calmLandingPageImage from "@/../public/projects/calm-landing-page.webp";
+import carBookingAppImage from "@/../public/projects/car-booking-app.webp";
+import digitalMarketplaceImage from "@/../public/projects/digital-marketplace.webp";
+import doctorBookingAppImage from "@/../public/projects/doctor-booking-app.webp";
+import foodOrderingAppImage from "@/../public/projects/food-ordering-app.webp";
+import grassRootLandingPageImage from "@/../public/projects/grass-root-landing-page.webp";
+import gymImage from "@/../public/projects/gym.webp";
+import mernBlogAppImage from "@/../public/projects/mern-blog-app.webp";
+import mernNoteAppImage from "@/../public/projects/mern-note-app.webp";
+import portfolio_1_image from "@/../public/projects/portfolio-1.webp";
+import portfolio_2_image from "@/../public/projects/portfolio-2.webp";
+import portfolio_3_image from "@/../public/projects/portfolio-3.webp";
+import portfolio_4_image from "@/../public/projects/portfolio-4.webp";
+import portfolio_5_image from "@/../public/projects/portfolio-5.webp";
+import shoppingAppImage from "@/../public/projects/shopping-app.webp";
+import simpleProjectsImage from "@/../public/projects/simple-projects.webp";
+import twitterCloneImage from "@/../public/projects/twitter-clone.webp";
+import universityLandingPageImage from "@/../public/projects/university-landing-page.webp";
+import wafflesImage from "@/../public/projects/waffles.webp";
 
-import shoppingAppImage from '@/../public/projects/shopping-app.webp'
-import digitalMarketplaceImage from '@/../public/projects/digital-marketplace.webp'
-import wafflesImage from '@/../public/projects/waffles.webp'
-import gymImage from '@/../public/projects/gym.webp'
-import twitterCloneImage from '@/../public/projects/twitter-clone.webp'
-import mernBlogAppImage from '@/../public/projects/mern-blog-app.webp'
-import foodOrderingAppImage from '@/../public/projects/food-ordering-app.webp'
-import blogAppImage from '@/../public/projects/blog-app.webp'
-import doctorBookingAppImage from '@/../public/projects/doctor-booking-app.webp'
-import portfolio_1_image from '@/../public/projects/portfolio-1.webp'
-import portfolio_2_image from '@/../public/projects/portfolio-2.webp'
-import portfolio_3_image from '@/../public/projects/portfolio-3.webp'
-import portfolio_4_image from '@/../public/projects/portfolio-4.webp'
-import portfolio_5_image from '@/../public/projects/portfolio-5.webp'
-import calmLandingPageImage from '@/../public/projects/calm-landing-page.webp'
-import universityLandingPageImage from '@/../public/projects/university-landing-page.webp'
-import grassRootLandingPageImage from '@/../public/projects/grass-root-landing-page.webp'
-import carBookingAppImage from '@/../public/projects/car-booking-app.webp'
-import mernNoteAppImage from '@/../public/projects/mern-note-app.webp'
-import simpleProjectsImage from '@/../public/projects/simple-projects.webp'
-
-
+import { ProjectType } from "@/types";
 import { TbBrandFiverr } from "react-icons/tb";
 
 export const navLinks = [
   {
+    icon: FaHome,
     label: "Home",
-    href: "/",
+    href: "",
   },
   {
-    label: "Projects",
-    href: "/projects",
-  },
-  {
+    icon: FaBriefcase,
     label: "About",
-    href: "/#about-me",
+    href: "#about",
   },
   {
+    icon: FaRocket,
+    label: "Projects",
+    href: "#projects",
+  },
+  {
+    icon: FaLightbulb,
+    label: "Skills",
+    href: "#skills",
+  },
+  {
+    icon: FaPhoneAlt,
     label: "Contact",
-    href: "/contact",
+    href: "#contact",
   },
 ];
 
@@ -59,6 +67,7 @@ export const projectCategories = [
   "social media",
   "ecommerce",
   "portfolio",
+  "management",
   "booking",
   "landing page",
 ] as const;
@@ -91,23 +100,7 @@ export const socialLinks = [
   },
 ];
 
-export const techImages = [
-  "/techs/html.png",
-  "/techs/css.png",
-  "/techs/tailwind-css.png",
-  "/techs/javascript.png",
-  "/techs/typescript.png",
-  "/techs/nextjs.jpg",
-  "/techs/framer-motion.png",
-  "/techs/express.png",
-  "/techs/mysql.png",
-  "/techs/mongodb.png",
-  "/techs/prisma.png",
-  "/techs/tanstack-query.png",
-  "/techs/stripe.png",
-];
-
-export const projects = [
+export const projects: ProjectType[] = [
   {
     name: "Glamify Shopping App",
     image: shoppingAppImage,
@@ -132,6 +125,7 @@ export const projects = [
   {
     name: "Gym Admin Management",
     image: gymImage,
+    category: "management",
     githubLink: "https://github.com/ratul544388/gym-admin-management",
     deployedLink: "https://afsg.vercel.app/",
   },
@@ -287,4 +281,31 @@ export const reviews = [
     comment:
       "Impressive work, as always! Your expertise in both front-end and back-end development shines through in every project.",
   },
+];
+
+export const frontendSkills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "NextJS",
+  "Framer Motion",
+  "GSAP",
+  "Bootstrap",
+  "Shadcn/UI",
+];
+
+export const backendSkills = [
+  "NodeJS",
+  "NextJS",
+  "MongoDB",
+  "PostgreSQL",
+  "Prisma",
+  "Drizzle",
+  "HonoJS",
+  "NextAuth",
+  "Redux Toolkit",
+  "Tanstack Query",
+  "Stripe",
 ];

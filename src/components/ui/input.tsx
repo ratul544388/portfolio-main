@@ -2,24 +2,33 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {}
-
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, ...props }, ref) => {
-    return (
+const Input = React.forwardRef<
+  HTMLInputElement,
+  React.ComponentProps<"input"> & { label?: string }
+>(({ className, type, label, ...props }, ref) => {
+  const value = props.value;
+  return (
+    <div className="relative">
       <input
         type={type}
         className={cn(
-          "flex h-20 w-full rounded-md bg-accent/70 px-3 py-2 font-chakra_petch text-sm tracking-wider ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:font-chakra_petch placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 disabled:cursor-not-allowed disabled:opacity-50",
+          "peer flex h-14 w-full rounded-md border border-white/10 bg-transparent px-3 py-2 text-base file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
           className,
         )}
         ref={ref}
         {...props}
       />
-    );
-  },
-);
+      <span
+        className={cn(
+          "absolute pointer-events-none left-1.5 top-1/2 -translate-y-1/2 peer-focus:bg-foreground px-2 text-sm transition-all peer-focus:top-[-3px] peer-focus:text-primary peer-focus:text-xs",
+          value && "top-[-3px] text-xs bg-foreground",
+        )}
+      >
+        {label}
+      </span>
+    </div>
+  );
+});
 Input.displayName = "Input";
 
 export { Input };

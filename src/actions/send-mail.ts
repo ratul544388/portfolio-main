@@ -1,7 +1,7 @@
 "use server";
 import * as z from "zod";
 import { Resend } from "resend";
-import { ContactSchema } from "@/schemas";
+import { ContactSchema } from "@/validations";
 import { myEmail } from "@/constants";
 
 const resend = new Resend(process.env.RESEND_API_KEY);

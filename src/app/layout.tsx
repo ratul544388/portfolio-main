@@ -1,17 +1,17 @@
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header/header";
-import { fonts } from "@/fonts";
-import { cn } from "@/lib/utils";
+import { Header } from "@/components/header";
 import type { Metadata } from "next";
 import "./globals.css";
+import { fonts } from "@/fonts";
+import { Footer } from "@/components/footer";
+import { SmoothScrollProvider } from "@/providers/smooth-scroll-provider";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: {
-    default: "Portfolio",
-    template: "%s | Portfolio"
+    template: "%s | Portfolio",
+    default: "Portfolio | Ratul",
   },
   description: "Hello there, welcome to  my portfolio",
-
 };
 
 export default function RootLayout({
@@ -21,10 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={cn(fonts, "font-inter")}>
-        <Header />
-        <main className="min-h-screen overflow-hidden">{children}</main>
-        <Footer />
+      <body className={`${fonts} antialiased`}>
+        <SmoothScrollProvider>
+          <Header />
+          {children}
+          <Footer />
+          <Toaster />
+        </SmoothScrollProvider>
       </body>
     </html>
   );
