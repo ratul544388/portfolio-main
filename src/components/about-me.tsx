@@ -164,7 +164,13 @@ const _3dImage = ({ type = "bottom-left", src, className }: Image3DProps) => {
             type === "top-left" && "[transform:rotateY(-25deg)_rotateX(25deg)]",
           )}
         >
-          <Image src={src} fill alt="coading" className="object-cover" />
+          <Image
+            src={src}
+            fill
+            alt="coading"
+            className="object-cover"
+            sizes="(max-width: 640px) 150px, (max-width: 1024px) 250px, 300px"
+          />
         </div>
       </div>
     </WhileInView>

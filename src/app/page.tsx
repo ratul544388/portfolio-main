@@ -7,7 +7,7 @@ import { Skills } from "@/components/skills";
 
 const Home = () => {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-20">
       <Intro />
       <AboutMe/>
       <Projects/>

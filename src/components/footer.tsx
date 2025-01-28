@@ -12,7 +12,7 @@ export const Footer = () => {
     <footer className="w-full bg-foreground text-white overflow-hidden mt-32">
       <WhileInView y={100}>
         <Container className="flex flex-col items-center justify-center lg:justify-between lg:px-20 gap-4 py-10 lg:flex-row lg:gap-10">
-          <Logo size="sm" />
+          <Logo />
           <ul className="flex gap-2 lg:order-3">
             {socialLinks.map(({ href, icon: Icon }) => (
               <motion.li

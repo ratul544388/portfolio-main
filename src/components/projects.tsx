@@ -92,7 +92,7 @@ const ProjectList = ({
       >
         {slicedProjects.map((p) => (
           <li key={p.name}>
-            <WhileInView scale={0.5} key={p.name}>
+            <WhileInView y={100} duration={0.5} key={p.name}>
               <Project project={p} />
             </WhileInView>
           </li>
@@ -100,10 +100,7 @@ const ProjectList = ({
       </ul>
       {filteredProjects.length >= 8 && !showMore && (
         <WhileInView className="mt-12" y={50}>
-          <Button
-            variant="black"
-            onClick={() => setShowMore(true)}
-          >
+          <Button variant="black" onClick={() => setShowMore(true)}>
             Show More
           </Button>
         </WhileInView>
@@ -156,6 +153,7 @@ const Project = ({ project }: { project: ProjectType }) => {
           fill
           className="object-cover"
           placeholder="blur"
+          sizes="350px"
         />
       </div>
       <div className="p-3">

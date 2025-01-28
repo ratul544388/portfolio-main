@@ -39,7 +39,7 @@ export const Contact = () => {
         <h2 className="mt-7 flex" aria-label={myEmail}>
           <RevealedAnimatedText
             color="primary"
-            className="xs:text-4xl text-2xl"
+            className="sm:text-4xl text-2xl"
           >
             ratulislam544388
           </RevealedAnimatedText>

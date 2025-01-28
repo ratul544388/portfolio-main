@@ -73,12 +73,13 @@ export const Intro = () => {
           </HoverButton>
         </WhileInView>
       </div>
-      <WhileInView scale={0} className="relative h-[400px]">
+      <WhileInView scale={0} className="relative h-[400px] md:h-[500px] lg:h-[400px]">
         <Image
           src="/hero.jpg"
           alt="hero"
           fill
           className="object-cover [transform:scaleX(-1)]"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </WhileInView>
     </Container>
