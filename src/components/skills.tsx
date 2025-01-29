@@ -8,8 +8,9 @@ import { RevealedAnimatedText } from "./revealed-animated-text";
 import { SectionHeading } from "./section-heading";
 
 export const Skills = () => {
+
   return (
-    <section className="scroll-margin-top mt-12 overflow-hidden max-w-screen-2xl mx-auto" id="skills">
+    <section className="pt-20 overflow-hidden max-w-screen-2xl mx-auto" id="skills">
       <SectionHeading icon={Lightbulb}>Skills</SectionHeading>
       <div className="xs:flex-row xs:pl-5 mt-14 flex select-none flex-col items-center gap-6">
         <h3>
@@ -21,7 +22,7 @@ export const Skills = () => {
             <FaLocationArrow
               aria-hidden="true"
               className="size-5 rotate-45"
-            />{" "}
+            />
           </RevealedAnimatedText>
         </h3>
         <Marquee duration={30} gap={40} direction="left">

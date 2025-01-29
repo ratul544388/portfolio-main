@@ -2,11 +2,12 @@
 
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";
+import { SplitAnimatedText } from "./split-animated-text";
 import { WhileInView } from "./while-in-view";
 
 interface SectionHeadingProps {
   className?: string;
-  children?: string;
+  children: string;
   icon?: LucideIcon;
 }
 
@@ -15,16 +16,20 @@ export const SectionHeading = ({
   children,
   icon: Icon,
 }: SectionHeadingProps) => {
+  const CHAR_DELAY = 0.1;
   return (
-    <WhileInView
-      y={50}
+    <div
       className={cn(
         "flex items-center justify-center gap-3 font-rowdies text-4xl",
         className,
       )}
     >
-      <h1>{children}</h1>
-      {Icon && <Icon className="size-8" />}
-    </WhileInView>
+      <SplitAnimatedText charDelay={CHAR_DELAY}>{children}</SplitAnimatedText>
+      {Icon && (
+        <WhileInView elem="span" scale={0} delay={children.length * CHAR_DELAY}>
+          <Icon className="size-8" />
+        </WhileInView>
+      )}
+    </div>
   );
 };

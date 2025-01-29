@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useRef } from "react";
 import { Container } from "./container";
 import { RevealedAnimatedText } from "./revealed-animated-text";
+import { SplitAnimatedText } from "./split-animated-text";
 import { buttonVariants } from "./ui/button";
 import { WhileInView } from "./while-in-view";
 
@@ -16,6 +17,7 @@ const DESCRIPTION =
   "I'm a Full Stack Web Developer with 3 years of experience. I'm proficient in both frontend and backend technologies, including HTML, CSS, Tailwind CSS, React, Next.js, TypeScript, JavaScript, Framer Motion, GSAP, MongoDB, MySQL, Express, Node.js. I've built numerous full stack websites, such as e-commerce platforms, social media sites, portfolios, and landing pages. I'm passionate about learning new technologies to enhance my skills.";
 
 export const AboutMe = () => {
+
   return (
     <section
       id="about"
@@ -45,33 +47,7 @@ const TextContainer = () => {
           About me
         </RevealedAnimatedText>
       </p>
-      <h1
-        aria-label={HEADING}
-        className="mt-5 flex flex-col items-center lg:items-start"
-      >
-        <span className="flex flex-wrap justify-center gap-x-2.5">
-          <RevealedAnimatedText color="background">Hello</RevealedAnimatedText>
-          <RevealedAnimatedText delay={0.21} color="background">
-            I&apos;m
-          </RevealedAnimatedText>
-          <RevealedAnimatedText delay={0.42} color="primary">
-            Ratul,
-          </RevealedAnimatedText>
-          <RevealedAnimatedText delay={0.63} color="background">
-            A Full
-          </RevealedAnimatedText>
-        </span>
-        <span className="flex flex-wrap justify-center gap-x-2.5">
-          <RevealedAnimatedText color="background">Stack</RevealedAnimatedText>
-          <RevealedAnimatedText delay={0.21} color="primary">
-            Web Developer
-          </RevealedAnimatedText>
-        </span>
-        <RevealedAnimatedText color="background">
-          creating seamless
-        </RevealedAnimatedText>
-        <RevealedAnimatedText color="primary">experience</RevealedAnimatedText>
-      </h1>
+      <SplitAnimatedText className="mt-5 max-w-[500px] mx-auto lg:mx-[initial]">{HEADING}</SplitAnimatedText>
       <div className="mt-8 flex flex-col font-chakra_petch lg:ml-[430px]">
         <p>
           <RevealedAnimatedText color="background" type="paragraph">

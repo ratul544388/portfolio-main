@@ -40,7 +40,7 @@ export const MobileMenu = () => {
         transition={{
           ease: "easeInOut",
         }}
-        className="fixed right-0 top-0 z-50 flex flex-col items-center justify-between overflow-hidden bg-background pb-10 pt-20"
+        className="fixed right-0 top-0 z-50 flex flex-col items-center justify-between overflow-hidden bg-background py-20"
       >
         <nav className="mt-10">
           <ul key={String(open)} className="space-y-6">

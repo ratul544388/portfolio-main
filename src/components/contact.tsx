@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { myEmail } from "@/constants";
 import { useToast } from "@/hooks/use-toast";
 import { ContactSchema } from "@/validations";
 import { Mail, MousePointer2 } from "lucide-react";
@@ -21,12 +22,12 @@ import { useTransition } from "react";
 import { Container } from "./container";
 import { RevealedAnimatedText } from "./revealed-animated-text";
 import { SectionHeading } from "./section-heading";
-import { myEmail } from "@/constants";
 import { WhileInView } from "./while-in-view";
 
+const DESCRIPTION =
+  "Like what see? Have a project you'd like to talk about? Want to ask me a personal question?";
+
 export const Contact = () => {
-  const DESCRIPTION =
-    "Like what see? Have a project you'd like to talk about? Want to ask me a personal question?";
 
   return (
     <section
@@ -39,7 +40,7 @@ export const Contact = () => {
         <h2 className="mt-7 flex" aria-label={myEmail}>
           <RevealedAnimatedText
             color="primary"
-            className="sm:text-4xl text-2xl"
+            className="text-2xl sm:text-4xl"
           >
             ratulislam544388
           </RevealedAnimatedText>
@@ -98,7 +99,7 @@ const ContactForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="mt-14 flex w-full mx-auto max-w-[600px] flex-col gap-8"
+          className="mx-auto mt-14 flex w-full max-w-[600px] flex-col gap-8"
         >
           <FormField
             control={form.control}

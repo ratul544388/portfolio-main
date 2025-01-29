@@ -71,7 +71,7 @@ body {
     @apply bg-background text-foreground;
   }
   .scroll-margin-top {
-    @apply scroll-mt-24
+    @apply scroll-mt-20
   }
 }
 

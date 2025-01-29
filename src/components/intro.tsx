@@ -13,6 +13,7 @@ const DESCRIPTION =
   "Passionate about turning ideas into digital reality, I blend creativity and technical expertise to craft dynamic web experiences. With a knack for innovation and a love for learning, I continuously push the boundaries of web development.";
 
 export const Intro = () => {
+
   return (
     <Container
       id="home"
@@ -73,7 +74,10 @@ export const Intro = () => {
           </HoverButton>
         </WhileInView>
       </div>
-      <WhileInView scale={0} className="relative h-[400px] md:h-[500px] lg:h-[400px]">
+      <WhileInView
+        scale={0}
+        className="relative h-[400px] md:h-[500px] lg:h-[400px]"
+      >
         <Image
           src="/hero.jpg"
           alt="hero"
