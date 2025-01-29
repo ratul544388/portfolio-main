@@ -30,6 +30,11 @@ import simpleProjectsImage from "@/../public/projects/simple-projects.webp";
 import twitterCloneImage from "@/../public/projects/twitter-clone.webp";
 import universityLandingPageImage from "@/../public/projects/university-landing-page.webp";
 import wafflesImage from "@/../public/projects/waffles.webp";
+import stackCardImageAnimation from '@/../public/stack-cards-images/animation.jpg';
+import stackCardImagebackend from '@/../public/stack-cards-images/backend.jpg';
+import stackCardImageFigma from '@/../public/stack-cards-images/figma.jpg';
+import stackCardImageFullStack from '@/../public/stack-cards-images/full-stack.jpg';
+import stackCardImageUILibraries from '@/../public/stack-cards-images/ui-ilbraries.jpg';
 
 import { ProjectType } from "@/types";
 import { TbBrandFiverr } from "react-icons/tb";
@@ -309,3 +314,35 @@ export const backendSkills = [
   "Tanstack Query",
   "Stripe",
 ];
+
+export const stackCards = [
+  {
+    title: "Figma to Pixel-Perfect Code",
+    description: "I transform Figma designs into responsive, high-quality code using Tailwind CSS or standard CSS. My focus is on pixel-perfect accuracy, clean structure, and cross-device compatibility. By maintaining best coding practices, I ensure that every design translates seamlessly into a functional, fast-loading, and visually stunning user interface.",
+    image: stackCardImageFigma,
+  },
+  {
+    title: "Creating Stunning Animations",
+    description: "Using Framer Motion and GSAP, I create smooth, engaging animations that enhance user experience. Whether it's subtle micro-interactions or complex motion effects, my animations are performance-optimized and visually appealing. I ensure fluid transitions and interactive elements that make web applications feel dynamic, intuitive, and immersive.",
+    image: stackCardImageAnimation,
+  },
+  {
+    title: "Modern UI with Top Libraries",
+    description: "I build sleek, modern interfaces using UI libraries like ShadCN, Flowbite, and DaisyUI. These tools help me develop visually appealing, highly functional, and responsive designs. By leveraging pre-built, customizable components, I ensure fast development while maintaining a clean and user-friendly experience across different screen sizes and devices.",
+    image: stackCardImageUILibraries,
+  },
+  {
+    title: "Scalable Backend Development",
+    description: "I develop scalable, high-performance backends using Node.js, Next.js, Express, MongoDB, PostgreSQL, Prisma, and Drizzle. My expertise lies in creating secure APIs, handling databases efficiently, and optimizing performance. I ensure seamless server-side functionality that supports fast, reliable, and maintainable web applications for various use cases.",
+    image: stackCardImagebackend,
+  },
+  {
+    title: "Full-Stack Web Development",
+    description: "As a full-stack developer, I build robust applications using React, Next.js, and TypeScript. I specialize in crafting responsive frontends and scalable backends, ensuring seamless user experiences. My expertise includes state management, API integrations, and database handling, allowing me to develop high-quality, end-to-end web solutions.",
+    image: stackCardImageFullStack,
+  }
+];
+
+
+
+

@@ -1,9 +1,9 @@
 "use client";
 import { Logo } from "@/components/logo";
-import { navLinks } from "@/constants";
+import { navLinks, socialLinks } from "@/constants";
 import { useRouterHash } from "@/hooks/use-router-hash";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
 import { Suspense } from "react";
 import { Container } from "./container";
@@ -22,8 +22,9 @@ export const Header = () => {
           <Navbar />
           <MobileMenu />
         </Suspense>
-        <span className="hidden sm:block" aria-hidden="true" />
+        <SocialLinks />
       </Container>
+      <ScrollLine />
     </header>
   );
 };
@@ -60,5 +61,34 @@ const Navbar = () => {
         </ul>
       </nav>
     </Suspense>
+  );
+};
+
+const SocialLinks = () => {
+  return (
+    <nav className="hidden md:block">
+      <ul className="flex">
+        {socialLinks.map(({ href, icon: Icon, label }) => (
+          <li key={label}>
+            <Link
+              href={href}
+              className="inline-block rounded-full p-2 transition-colors hover:bg-accent"
+            >
+              <Icon className="size-4" />
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
+
+const ScrollLine = () => {
+  const { scrollYProgress } = useScroll();
+  return (
+    <motion.span
+      className="absolute inset-0 top-[calc(100%_-_4px)] h-1 rounded-full bg-gradient-to-r from-purple-500 via-indigo-600 to-blue-600"
+      style={{ scaleX: scrollYProgress, originX: 0 }}
+    />
   );
 };

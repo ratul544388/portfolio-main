@@ -16,7 +16,7 @@ export const SectionHeading = ({
   children,
   icon: Icon,
 }: SectionHeadingProps) => {
-  const CHAR_DELAY = 0.1;
+  const CHAR_DELAY = 0.075;
   return (
     <div
       className={cn(
@@ -26,7 +26,7 @@ export const SectionHeading = ({
     >
       <SplitAnimatedText charDelay={CHAR_DELAY}>{children}</SplitAnimatedText>
       {Icon && (
-        <WhileInView elem="span" scale={0} delay={children.length * CHAR_DELAY}>
+        <WhileInView elem="span" className="mb-2" scale={0} delay={children.length * CHAR_DELAY}>
           <Icon className="size-8" />
         </WhileInView>
       )}

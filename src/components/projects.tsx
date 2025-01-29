@@ -151,7 +151,7 @@ const Project = ({ project }: { project: ProjectType }) => {
       whileHover="hovered"
       className="relative cursor-pointer overflow-hidden border shadow-sm"
     >
-      <div className="xs:h-[150px] relative h-[100px] w-full">
+      <div className="xs:h-[150px] relative h-[100px] w-full rounded-md overflow-hidden shadow-sm hover:shadow-md">
         <Image
           src={image}
           alt={name}
