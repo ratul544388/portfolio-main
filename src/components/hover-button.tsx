@@ -33,8 +33,9 @@ export const HoverButton = ({
       initial="initial"
       whileHover="hovered"
       className={cn(
-        "relative overflow-hidden",
+        "relative overflow-hidden transition-colors duration-200",
         buttonVariants({ variant, size, cut, className }),
+        variant === "black" && "dark:hover:text-white",
       )}
     >
       <span className="z-10">{children}</span>

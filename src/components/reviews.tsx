@@ -17,8 +17,8 @@ import { Star } from "lucide-react";
 
 export const Reviews = () => {
   return (
-    <section className="mt-28 w-full select-none bg-foreground pb-24 pt-20 text-white [clip-path:polygon(32%_0,100%_17%,100%_100%,0_99%,0_19%)] lg:[clip-path:polygon(14%_0,100%_16%,100%_100%,0%_100%)]">
-      <SectionHeading icon={Star} className="text-primary">
+    <section className="mt-28 w-full select-none bg-background-2 pb-24 pt-20 text-white [clip-path:polygon(32%_0,100%_17%,100%_100%,0_99%,0_19%)] lg:[clip-path:polygon(14%_0,100%_16%,100%_100%,0%_100%)]">
+      <SectionHeading color="primary" icon={Star} className="text-primary">
         Reviews
       </SectionHeading>
       <WhileInView y={100} className="mt-10">

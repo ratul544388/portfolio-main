@@ -105,7 +105,7 @@ const ProjectList = ({
       </ul>
       {filteredProjects.length >= 8 && !showMore && (
         <WhileInView className="mt-12" y={50}>
-          <Button variant="black" onClick={() => setShowMore(true)}>
+          <Button variant="secondary" onClick={() => setShowMore(true)}>
             Show More
           </Button>
         </WhileInView>
@@ -149,9 +149,9 @@ const Project = ({ project }: { project: ProjectType }) => {
     <motion.article
       initial="initial"
       whileHover="hovered"
-      className="relative cursor-pointer overflow-hidden border shadow-sm"
+      className="relative bg-background rounded-md cursor-pointer overflow-hidden border shadow-sm"
     >
-      <div className="xs:h-[150px] relative h-[100px] w-full rounded-md overflow-hidden shadow-sm hover:shadow-md">
+      <div className="xs:h-[150px] relative h-[100px] w-full shadow-sm hover:shadow-md">
         <Image
           src={image}
           alt={name}

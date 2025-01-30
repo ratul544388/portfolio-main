@@ -1,35 +1,39 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { ColorType } from "@/types";
 import { LucideIcon } from "lucide-react";
-import { SplitAnimatedText } from "./split-animated-text";
-import { WhileInView } from "./while-in-view";
+import { Heading } from "./heading";
+import { RevealAnimation } from "./reveal-animation";
 
 interface SectionHeadingProps {
   className?: string;
   children: string;
   icon?: LucideIcon;
+  color?: ColorType;
 }
 
 export const SectionHeading = ({
   className,
   children,
   icon: Icon,
+  color,
 }: SectionHeadingProps) => {
-  const CHAR_DELAY = 0.075;
   return (
-    <div
-      className={cn(
-        "flex items-center justify-center gap-3 font-rowdies text-4xl",
-        className,
-      )}
-    >
-      <SplitAnimatedText charDelay={CHAR_DELAY}>{children}</SplitAnimatedText>
-      {Icon && (
-        <WhileInView elem="span" className="mb-2" scale={0} delay={children.length * CHAR_DELAY}>
-          <Icon className="size-8" />
-        </WhileInView>
-      )}
-    </div>
+    <Heading className={cn(className)}>
+      <RevealAnimation threshold={1} color={color} className="flex gap-2 items-center mx-auto">
+        {children}
+        {Icon && (
+          <Icon
+            className={cn(
+              "size-8",
+              color === "primary" && "text-blue-600",
+              color === "background" && "text-background",
+              color === "foreground" && "text-foreground",
+            )}
+          />
+        )}
+      </RevealAnimation>
+    </Heading>
   );
 };

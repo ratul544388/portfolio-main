@@ -10,3 +10,7 @@ export type ProjectType = {
     githubLink: string;
     deployedLink: string;
 }
+
+export type ColorType = "background" | "foreground" | "primary" | "white"
+
+export type ThemeType = "system" | "light" | "dark";

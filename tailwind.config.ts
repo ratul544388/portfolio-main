@@ -21,7 +21,10 @@ export default {
         gupter: ["var(--gupter)"],
       },
       colors: {
-        background: "hsl(var(--background))",
+        background: {
+          DEFAULT: "hsl(var(--background))",
+          2: "hsl(var(--background-2))",
+        },
         foreground: "hsl(var(--foreground))",
         card: {
           DEFAULT: "hsl(var(--card))",

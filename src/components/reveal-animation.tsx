@@ -1,8 +1,8 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { ColorType } from "@/types";
 import { motion, Variants } from "framer-motion";
-import { ReactNode } from "react";
 
 const leftVariants: Variants = {
   initial: {
@@ -24,31 +24,29 @@ const topVariants: Variants = {
 
 interface RevealAnimatedTextProps
   extends React.HTMLAttributes<HTMLParagraphElement> {
-  children: ReactNode;
-  color?: "foreground" | "primary" | "background";
-  className?: string;
+  color?: ColorType;
   delay?: number;
   animateFrom?: "left" | "top";
-  type?: "heading" | "subheading" | "paragraph";
+  threshold?: number;
+  elem?: "span" | "h1" | "p";
+  invertColor?: boolean;
 }
-export const RevealedAnimatedText = ({
+export const RevealAnimation = ({
   children,
   color,
   className,
   delay = 0,
   animateFrom = "left",
-  type = "heading",
+  threshold = 0.3,
+  elem = "span",
 }: RevealAnimatedTextProps) => {
+  const MotionElement = motion.create(elem)
   return (
-    <motion.span
+    <MotionElement
       className={cn(
-        "relative w-fit text-foreground inline-block",
-        color === "primary" && "text-primary",
-        color === "foreground" && "text-foreground",
-        color === "background" && "text-background",
-        type === "heading"
-          ? "flex gap-2 items-center font-rowdies text-4xl leading-[56px]"
-          : "font-chakra_petch",
+        "relative w-fit inline-block",
+        color === "primary" && "bg-gradient bg-clip-text text-transparent",
+        color === "white" && "text-white",
         className,
       )}
     >
@@ -58,20 +56,19 @@ export const RevealedAnimatedText = ({
         initial="initial"
         whileInView="animate"
         viewport={{
-          amount: 0.3,
+          amount: threshold,
           once: true,
         }}
         transition={{
           delay,
         }}
         className={cn(
-          "absolute block bg-foreground",
-          color === "primary" && "bg-primary",
-          color === "foreground" && "bg-foreground",
-          color === "background" && "bg-background",
+          "absolute block bg-black dark:bg-white",
+          color === "primary" && "bg-primary dark:bg-primary",
+          color === "white" && "bg-white",
           animateFrom === "left" ? "inset-y-0 right-0" : "inset-x-0 bottom-0",
         )}
       />
-    </motion.span>
+    </MotionElement>
   );
 };

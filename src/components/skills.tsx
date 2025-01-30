@@ -1,32 +1,29 @@
 "use client";
 
-import { motion, MotionValue } from "framer-motion";
 import { backendSkills, frontendSkills, stackCards } from "@/constants";
-import { Lightbulb } from "lucide-react";
-import { FaLocationArrow } from "react-icons/fa";
-import { Marquee } from "./marquee";
-import { RevealedAnimatedText } from "./revealed-animated-text";
-import { SectionHeading } from "./section-heading";
-import { Container } from "./container";
-import Image, { StaticImageData } from "next/image";
-import { useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import { cn } from "@/lib/utils";
+import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+import { Lightbulb } from "lucide-react";
+import Image, { StaticImageData } from "next/image";
+import { useRef } from "react";
+import { FaLocationArrow } from "react-icons/fa";
+import { Container } from "./container";
+import { Heading } from "./heading";
+import { Marquee } from "./marquee";
+import { RevealAnimation } from "./reveal-animation";
+import { SectionHeading } from "./section-heading";
 
 export const Skills = () => {
   return (
     <section className="mx-auto h-full max-w-screen-2xl pt-20" id="skills">
       <SectionHeading icon={Lightbulb}>Skills</SectionHeading>
-      <div className="xs:flex-row xs:pl-5 mt-14 flex select-none flex-col items-center gap-6">
-        <h3>
-          <RevealedAnimatedText
-            color="primary"
-            className="xs:text-3xl text-2xl sm:text-4xl"
-          >
+      <div className="mt-14 flex select-none flex-col items-center gap-6 xs:flex-row xs:pl-5">
+        <Heading elem="h3">
+          <RevealAnimation color="primary" className="flex items-center gap-2">
             Frontend
-            <FaLocationArrow aria-hidden="true" className="size-5 rotate-45" />
-          </RevealedAnimatedText>
-        </h3>
+            <FaLocationArrow aria-hidden="true" className="size-5 text-blue-600 rotate-45" />
+          </RevealAnimation>
+        </Heading>
         <Marquee duration={30} gap={40} direction="left">
           {frontendSkills.map((skill) => (
             <li
@@ -38,7 +35,7 @@ export const Skills = () => {
           ))}
         </Marquee>
       </div>
-      <div className="xs:flex-row xs:pr-5 mt-14 flex select-none flex-col items-center gap-6">
+      <div className="mt-14 flex select-none flex-col items-center gap-6 xs:flex-row xs:pr-5">
         <Marquee duration={30} gap={40} direction="right">
           {backendSkills.map((skill) => (
             <li
@@ -49,18 +46,18 @@ export const Skills = () => {
             </li>
           ))}
         </Marquee>
-        <h3>
-          <RevealedAnimatedText
+        <Heading elem="h3">
+          <RevealAnimation
             color="primary"
-            className="xs:text-3xl text-2xl sm:text-4xl"
+            className="flex items-center gap-2"
           >
             <FaLocationArrow
               aria-hidden="true"
-              className="size-5 rotate-[-135deg]"
+              className="size-5 text-purple-500 rotate-[-135deg]"
             />
             Backend
-          </RevealedAnimatedText>
-        </h3>
+          </RevealAnimation>
+        </Heading>
       </div>
       <StickyCards />
     </section>
@@ -128,16 +125,20 @@ export const StickyCard = ({
       <motion.div
         style={{ scale: cardScale }}
         className={cn(
-          "w-full gap-5 rounded-lg border-2 border-cyan-100 bg-gradient-to-b from-cyan-50 to-white p-6 shadow-sm",
-          index === 1 && "from-orange-50 border-orange-100",
-          index === 2 && "from-purple-50 border-purple-100",
-          index === 3 && "from-pink-50 border-from-pink-100",
-          index === 4 && "from-yellow-50 border-yellow-100",
+          "w-full gap-5 rounded-lg border-2 border-cyan-100 bg-gradient-to-b from-cyan-50 to-white p-6 shadow-sm dark:border-cyan-950 dark:from-cyan-950 dark:to-black",
+          index === 1 &&
+            "border-orange-50 from-orange-50 dark:border-orange-950 dark:from-orange-950",
+          index === 2 &&
+            "border-purple-100 from-purple-50 dark:border-purple-950 dark:from-purple-950",
+          index === 3 &&
+            "border-from-pink-100 from-pink-50 dark:border-pink-950 dark:from-pink-950",
+          index === 4 &&
+            "border-yellow-100 from-yellow-50 dark:border-yellow-950 dark:from-yellow-950",
         )}
       >
         <h1 className="text-center font-rowdies text-3xl">{title}</h1>
         <div className="mt-8 flex flex-col-reverse gap-7 md:flex-row">
-          <p className="font-chakra_petch">
+          <p className="font-chakra_petch text-muted-foreground">
             {description}
           </p>
           <div className="h-[250px] w-full min-w-[55%] overflow-hidden rounded-lg">

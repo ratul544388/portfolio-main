@@ -6,6 +6,7 @@ import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import { WhileInView } from "./while-in-view";
+import { ThemeToggler } from "./theme-toggler";
 
 export const MobileMenu = () => {
   const [open, setOpen] = useState(false);
@@ -40,9 +41,9 @@ export const MobileMenu = () => {
         transition={{
           ease: "easeInOut",
         }}
-        className="fixed right-0 top-0 z-50 flex flex-col items-center justify-between overflow-hidden bg-background py-20"
+        className="fixed py-24 right-0 top-0 z-50 flex flex-col gap-16 items-center overflow-hidden bg-background"
       >
-        <nav className="mt-10">
+        <nav className="">
           <ul key={String(open)} className="space-y-6">
             {navLinks.map(({ label, href, icon: Icon }, i) => {
               const isActive = href === hash;
@@ -57,7 +58,7 @@ export const MobileMenu = () => {
                     onClick={() => setOpen(false)}
                     href={href}
                     className={cn(
-                      "font-rowdies flex items-center gap-4 text-3xl text-muted-foreground transition-colors",
+                      "flex items-center gap-4 font-rowdies text-3xl text-muted-foreground transition-colors",
                       isActive && "text-primary",
                     )}
                   >
@@ -80,6 +81,10 @@ export const MobileMenu = () => {
             ))}
           </ul>
         </nav>
+        <div className="flex flex-col items-center gap-2">
+          <h3 className="font-bold">Theme</h3>
+          <ThemeToggler iconSize={28}/>
+        </div>
       </motion.div>
     </div>
   );
@@ -126,9 +131,9 @@ const Trigger = ({
 
   return (
     <button
-      style={{clipPath: "polygon(33% 0, 100% 0%, 100% 100%, 0% 100%)"}}
+      style={{ clipPath: "polygon(33% 0, 100% 0%, 100% 100%, 0% 100%)" }}
       onClick={onOpenChange}
-      className="relative bg-foreground z-[100] flex items-center h-14 w-14 pl-4 pr-2 py-[15px] flex-col justify-between"
+      className="relative z-[100] flex h-14 w-14 flex-col items-center justify-between bg-foreground py-[15px] pl-4 pr-2"
     >
       <motion.span
         variants={topVariants}

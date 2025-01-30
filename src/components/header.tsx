@@ -9,6 +9,7 @@ import { Suspense } from "react";
 import { Container } from "./container";
 import { MobileMenu } from "./mobile-menu";
 import { buttonVariants } from "./ui/button";
+import { ThemeToggler } from "./theme-toggler";
 
 export const Header = () => {
   return (
@@ -18,11 +19,16 @@ export const Header = () => {
         className="flex h-full items-center justify-between"
       >
         <Logo />
-        <Suspense fallback="">
+        <Suspense>
           <Navbar />
-          <MobileMenu />
         </Suspense>
-        <SocialLinks />
+        <div className="flex items-center gap-3">
+          <SocialLinks />
+          <ThemeToggler className="hidden md:block" />
+          <Suspense>
+            <MobileMenu />
+          </Suspense>
+        </div>
       </Container>
       <ScrollLine />
     </header>
@@ -51,7 +57,7 @@ const Navbar = () => {
                   {isActive && (
                     <motion.span
                       layoutId="activeHash"
-                      className="absolute inset-x-4 top-full h-1 rounded-full bg-primary"
+                      className="absolute inset-x-4 top-full h-1 rounded-full bg-gradient"
                     />
                   )}
                 </Link>
@@ -66,13 +72,13 @@ const Navbar = () => {
 
 const SocialLinks = () => {
   return (
-    <nav className="hidden md:block">
+    <nav className="hidden lg:block ">
       <ul className="flex">
         {socialLinks.map(({ href, icon: Icon, label }) => (
           <li key={label}>
             <Link
               href={href}
-              className="inline-block rounded-full p-2 transition-colors hover:bg-accent"
+              className="block rounded-full p-2 transition-colors hover:bg-accent"
             >
               <Icon className="size-4" />
             </Link>
@@ -87,8 +93,8 @@ const ScrollLine = () => {
   const { scrollYProgress } = useScroll();
   return (
     <motion.span
-      className="absolute inset-0 top-[calc(100%_-_4px)] h-1 rounded-full bg-gradient-to-r from-purple-500 via-indigo-600 to-blue-600"
-      style={{ scaleX: scrollYProgress, originX: 0 }}
+      className="bg-gradient absolute inset-0 top-[calc(100%_-_4px)] h-1 bg-gradient-to-r"
+      style={{ scaleX: scrollYProgress, originX: 0, borderRadius: 9999 }}
     />
   );
 };

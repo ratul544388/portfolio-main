@@ -20,7 +20,8 @@ import { ContactSchema } from "@/validations";
 import { Mail, MousePointer2 } from "lucide-react";
 import { useTransition } from "react";
 import { Container } from "./container";
-import { RevealedAnimatedText } from "./revealed-animated-text";
+import { Heading } from "./heading";
+import { RevealAnimation } from "./reveal-animation";
 import { SectionHeading } from "./section-heading";
 import { WhileInView } from "./while-in-view";
 
@@ -28,34 +29,29 @@ const DESCRIPTION =
   "Like what see? Have a project you'd like to talk about? Want to ask me a personal question?";
 
 export const Contact = () => {
-
   return (
     <section
       id="contact"
-      className="scroll-margin-top mt-16 bg-foreground text-center text-background"
+      className="scroll-margin-top mt-16 bg-background-2 text-center text-white"
       style={{ clipPath: "polygon(11% 4%, 100% 0, 100% 100%, 0 93%, 0 15%)" }}
     >
-      <Container className="flex flex-col items-center py-16">
-        <SectionHeading icon={Mail}>Contact</SectionHeading>
-        <h2 className="mt-7 flex" aria-label={myEmail}>
-          <RevealedAnimatedText
-            color="primary"
-            className="text-2xl sm:text-4xl"
-          >
-            ratulislam544388
-          </RevealedAnimatedText>
-          <RevealedAnimatedText
-            color="background"
-            delay={0.21}
-            className="xs:text-4xl text-2xl"
-          >
+      <Container color="primary" className="flex flex-col items-center py-16">
+        <SectionHeading color="primary" icon={Mail}>
+          Contact
+        </SectionHeading>
+        <Heading elem="h3" className="mt-7 flex" aria-label={myEmail}>
+          <RevealAnimation color="primary">ratulislam544388</RevealAnimation>
+          <RevealAnimation color="white" delay={0.21}>
             @gmail.com
-          </RevealedAnimatedText>
-        </h2>
+          </RevealAnimation>
+        </Heading>
         <p aria-label={DESCRIPTION} className="mt-3">
-          <RevealedAnimatedText color="background" type="paragraph">
+          <RevealAnimation
+            color="white"
+            className="text-gray-400 dark:text-muted-foreground"
+          >
             {DESCRIPTION}
-          </RevealedAnimatedText>
+          </RevealAnimation>
         </p>
         <ContactForm />
       </Container>

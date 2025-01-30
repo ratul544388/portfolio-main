@@ -5,6 +5,7 @@ import { fonts } from "@/fonts";
 import { Footer } from "@/components/footer";
 import { SmoothScrollProvider } from "@/providers/smooth-scroll-provider";
 import { Toaster } from "@/components/ui/toaster";
+import { ThemeProvider } from "@/providers/theme-provider";
 
 export const metadata: Metadata = {
   title: {
@@ -20,13 +21,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       <body className={`${fonts} antialiased`}>
         <SmoothScrollProvider>
-          <Header />
-          {children}
-          <Footer />
-          <Toaster />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Header />
+            {children}
+            <Footer />
+            <Toaster />
+          </ThemeProvider>
         </SmoothScrollProvider>
       </body>
     </html>

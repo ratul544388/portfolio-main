@@ -9,6 +9,7 @@ body {
 @layer base {
   :root {
     --background: 0 0% 100%;
+    --background-2: 224 71.4% 4.1%;
     --foreground: 224 71.4% 4.1%;
     --card: 0 0% 100%;
     --card-foreground: 224 71.4% 4.1%;
@@ -19,7 +20,7 @@ body {
     --secondary: 220 14.3% 95.9%;
     --secondary-foreground: 220.9 39.3% 11%;
     --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
+    --muted-foreground: 220 8.9% 33%;
     --accent: 220 14.3% 95.9%;
     --accent-foreground: 220.9 39.3% 11%;
     --destructive: 0 84.2% 60.2%;
@@ -37,6 +38,7 @@ body {
 
   .dark {
     --background: 224 71.4% 4.1%;
+    --background-2: 224 71.4% 6.7%;
     --foreground: 210 20% 98%;
     --card: 224 71.4% 4.1%;
     --card-foreground: 210 20% 98%;
@@ -47,7 +49,7 @@ body {
     --secondary: 215 27.9% 16.9%;
     --secondary-foreground: 210 20% 98%;
     --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
+    --muted-foreground: 217.9 10.6% 78.9%;
     --accent: 215 27.9% 16.9%;
     --accent-foreground: 210 20% 98%;
     --destructive: 0 62.8% 30.6%;
@@ -72,6 +74,9 @@ body {
   }
   .scroll-margin-top {
     @apply scroll-mt-20;
+  }
+  .bg-gradient {
+    @apply bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-600 ;
   }
 }
 

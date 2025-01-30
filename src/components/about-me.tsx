@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { Container } from "./container";
-import { RevealedAnimatedText } from "./revealed-animated-text";
+import { RevealAnimation } from "./reveal-animation";
 import { SplitAnimatedText } from "./split-animated-text";
 import { buttonVariants } from "./ui/button";
 import { WhileInView } from "./while-in-view";
@@ -17,11 +17,10 @@ const DESCRIPTION =
   "I'm a Full Stack Web Developer with 3 years of experience. I'm proficient in both frontend and backend technologies, including HTML, CSS, Tailwind CSS, React, Next.js, TypeScript, JavaScript, Framer Motion, GSAP, MongoDB, MySQL, Express, Node.js. I've built numerous full stack websites, such as e-commerce platforms, social media sites, portfolios, and landing pages. I'm passionate about learning new technologies to enhance my skills.";
 
 export const AboutMe = () => {
-
   return (
     <section
       id="about"
-      className="scroll-margin-top relative mt-10 bg-foreground py-12 text-center text-background lg:text-start"
+      className="scroll-margin-top relative mt-10 bg-foreground py-12 text-center text-background dark:bg-background-2 dark:text-foreground lg:text-start"
     >
       <DecorationImages />
       <Container className="max-w-[800px]">
@@ -34,6 +33,7 @@ export const AboutMe = () => {
             className="lg:-translate-y-[250px] lg:translate-x-[370px]"
           />
         </div>
+        <Timeline />
       </Container>
     </section>
   );
@@ -43,18 +43,18 @@ const TextContainer = () => {
   return (
     <>
       <p className="font-gupter">
-        <RevealedAnimatedText color="background" type="paragraph">
-          About me
-        </RevealedAnimatedText>
+        <RevealAnimation color="white">About me</RevealAnimation>
       </p>
-      <SplitAnimatedText className="mt-5 max-w-[500px] mx-auto lg:mx-[initial]">{HEADING}</SplitAnimatedText>
+      <SplitAnimatedText className="mx-auto mt-5 max-w-[500px] lg:mx-[initial]">
+        {HEADING}
+      </SplitAnimatedText>
       <div className="mt-8 flex flex-col font-chakra_petch lg:ml-[430px]">
         <p>
-          <RevealedAnimatedText color="background" type="paragraph">
+          <RevealAnimation color="white" className="text-gray-300">
             {DESCRIPTION}
-          </RevealedAnimatedText>
+          </RevealAnimation>
         </p>
-        <WhileInView className="mx-auto mt-5 lg:mx-0 lg:ml-auto" y={30}>
+        <WhileInView className="mx-auto mt-6 lg:mx-0 lg:ml-auto" y={30}>
           <Link
             href="/ratul.cv.pdf"
             target="_blank"
@@ -151,4 +151,8 @@ const _3dImage = ({ type = "bottom-left", src, className }: Image3DProps) => {
       </div>
     </WhileInView>
   );
+};
+
+const Timeline = () => {
+  return <></>;
 };
