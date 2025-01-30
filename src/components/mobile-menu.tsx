@@ -41,7 +41,7 @@ export const MobileMenu = () => {
         transition={{
           ease: "easeInOut",
         }}
-        className="fixed py-24 right-0 top-0 z-50 flex flex-col gap-16 items-center overflow-hidden bg-background"
+        className="fixed right-0 top-0 z-50 flex flex-col items-center gap-16 overflow-hidden bg-background py-24"
       >
         <nav className="">
           <ul key={String(open)} className="space-y-6">
@@ -81,10 +81,15 @@ export const MobileMenu = () => {
             ))}
           </ul>
         </nav>
-        <div className="flex flex-col items-center gap-2">
+        <WhileInView
+          key={String(open)}
+          y={50}
+          delay={0.6}
+          className="flex flex-col items-center gap-2"
+        >
           <h3 className="font-bold">Theme</h3>
-          <ThemeToggler iconSize={28}/>
-        </div>
+          <ThemeToggler iconSize={28} />
+        </WhileInView>
       </motion.div>
     </div>
   );

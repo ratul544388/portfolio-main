@@ -25,7 +25,7 @@ export const AboutMe = () => {
       <DecorationImages />
       <Container className="max-w-[800px]">
         <TextContainer />
-        <div className="mt-12 flex justify-between lg:mt-0 lg:block">
+        <div className="relative mt-12 flex justify-between lg:mt-0 lg:block">
           <_3dImage src="/laptop-coding.webp" className="lg:-translate-y-28" />
           <_3dImage
             src="/desktop-coding.webp"
@@ -33,7 +33,7 @@ export const AboutMe = () => {
             className="lg:-translate-y-[250px] lg:translate-x-[370px]"
           />
         </div>
-        <Timeline />
+        {/* <Timeline /> */}
       </Container>
     </section>
   );
@@ -151,8 +151,4 @@ const _3dImage = ({ type = "bottom-left", src, className }: Image3DProps) => {
       </div>
     </WhileInView>
   );
-};
-
-const Timeline = () => {
-  return <></>;
 };

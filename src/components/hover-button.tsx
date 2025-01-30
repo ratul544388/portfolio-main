@@ -33,9 +33,9 @@ export const HoverButton = ({
       initial="initial"
       whileHover="hovered"
       className={cn(
-        "relative overflow-hidden transition-colors duration-200",
+        "relative overflow-hidden transition-colors duration-200 dark:hover:text-black",
         buttonVariants({ variant, size, cut, className }),
-        variant === "black" && "dark:hover:text-white",
+        variant === "foreground" && "dark:hover:text-white",
       )}
     >
       <span className="z-10">{children}</span>
@@ -46,7 +46,7 @@ export const HoverButton = ({
         }}
         className={cn(
           "absolute inset-0 bg-foreground",
-          variant === "black" && "bg-primary",
+          variant === "foreground" && "bg-primary",
         )}
       />
     </motion.button>

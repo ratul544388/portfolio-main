@@ -21,7 +21,7 @@ export const Intro = () => {
       className="scroll-margin-top grid items-center gap-10 pt-8 lg:grid-cols-2"
     >
       <div>
-        <Heading className="text-center lg:text-start" aria-label={TITLE}>
+        <Heading className="text-center max-w-lg mx-auto lg:mx-[initial] lg:text-start" aria-label={TITLE}>
           <RevealAnimation>Experienced&nbsp;</RevealAnimation>
           <RevealAnimation color="primary" delay={0.21}>
             Web Developer
@@ -44,7 +44,7 @@ export const Intro = () => {
           className="mt-7 flex justify-center gap-4 lg:justify-start"
         >
           <HoverButton
-            variant="black"
+            variant="foreground"
             size="xl"
             cut="top"
             className="text-base font-semibold"
@@ -69,7 +69,7 @@ export const Intro = () => {
       </div>
       <WhileInView
         scale={0}
-        className="relative h-[400px] md:h-[500px] lg:h-[400px]"
+        className="relative h-[300px] md:h-[500px] lg:h-[400px]"
       >
         <Image
           src="/hero-dark.jpg"
