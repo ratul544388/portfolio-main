@@ -27,7 +27,7 @@ export const WhileInView = ({
   once = true,
   elem: Elem = "div",
 }: WhileInViewProps) => {
-  const MotionElement = motion[Elem];
+  const MotionElement = motion.create(Elem);
   return (
     <MotionElement
       whileInView={{

@@ -175,7 +175,7 @@ const Project = ({ project }: { project: ProjectType }) => {
           </Link>
           <Link
             target="_blank"
-            href={githubLink}
+            href={deployedLink}
             className={cn(buttonVariants({ variant: "outline" }), "w-full")}
           >
             <span className="sm:xs:block hidden">Live</span>
