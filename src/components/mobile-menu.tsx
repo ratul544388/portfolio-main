@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { WhileInView } from "./while-in-view";
 import { ThemeToggler } from "./theme-toggler";
+import { WhileInView } from "./while-in-view";
 
 export const MobileMenu = () => {
   const [open, setOpen] = useState(false);
@@ -87,8 +87,7 @@ export const MobileMenu = () => {
           delay={0.6}
           className="flex flex-col items-center gap-2"
         >
-          <h3 className="font-bold">Theme</h3>
-          <ThemeToggler iconSize={28} />
+          <ThemeToggler />
         </WhileInView>
       </motion.div>
     </div>

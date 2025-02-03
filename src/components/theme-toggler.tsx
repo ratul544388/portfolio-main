@@ -1,49 +1,76 @@
 "use client";
 
-import { useMounted } from "@/hooks/use-mounted";
-import { cn } from "@/lib/utils";
-import { ThemeType } from "@/types";
-import { motion } from "framer-motion";
-import { MonitorCogIcon, Moon, Sun } from "lucide-react";
+import { Check, MonitorCogIcon, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { JSX } from "react";
-import { Skeleton } from "./ui/skeleton";
-interface ThemeTogglerProps extends React.HTMLAttributes<HTMLDivElement> {
+import * as React from "react";
+
+import { Button } from "@/components/ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
+
+export const ThemeToggler = ({
+  className,
+  align = "end",
+}: {
   className?: string;
-  iconSize?: number;
-}
+  align?: "start" | "end" | "center";
+}) => {
+  const { theme, setTheme } = useTheme();
+  const [open, setOpen] = React.useState(false);
 
-export const ThemeToggler = ({ className, iconSize = 16 }: ThemeTogglerProps) => {
-  const { themes, theme, setTheme } = useTheme();
-  const isMounted = useMounted();
-
-  const ThemeTypeMap: Record<ThemeType, JSX.Element> = {
-    system: <MonitorCogIcon size={iconSize}/>,
-    dark: <Moon size={iconSize} />,
-    light: <Sun size={iconSize} />,
-  };
-
-  if (!isMounted) {
-    return <Skeleton className="h-7 w-20 rounded-full" />;
-  }
+  const themes = [
+    {
+      name: "light",
+      icon: Sun,
+    },
+    {
+      name: "dark",
+      icon: Moon,
+    },
+    {
+      name: "system",
+      icon: MonitorCogIcon,
+    },
+  ];
 
   return (
-    <div className={cn("flex flex-row-reverse rounded-full dark:border shadow dark:shadow-none", className)}>
-      {themes.map((t) => (
-        <button
-          onClick={() => setTheme(t)}
-          className={cn("relative rounded-full p-1.5")}
-          key={t}
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          variant="outline"
+          className={cn("size-fit rounded-full p-2 px-4 sm:px-2", className)}
         >
-          {ThemeTypeMap[t as keyof typeof ThemeTypeMap]}
-          {t === theme && (
-            <motion.span
-              layoutId="activeTheme"
-              className="absolute inset-0 -z-10 rounded-full bg-secondary"
+          <span className="sm:sr-only">Theme</span>
+          <Sun className="size-4 dark:hidden" />
+          <Moon className="hidden size-4 dark:block" />
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent align={align} className="flex w-fit flex-col p-0 py-2">
+        {themes.map(({ name, icon: Icon }) => (
+          <Button
+            key={name}
+            variant="ghost"
+            className="w-full justify-start rounded-none capitalize"
+            onClick={() => {
+              setTheme(name);
+              setOpen(false);
+            }}
+          >
+            <Icon />
+            {name}
+            <Check
+              className={cn(
+                "ml-auto size-4 opacity-0",
+                theme === name && "opacity-100",
+              )}
             />
-          )}
-        </button>
-      ))}
-    </div>
+          </Button>
+        ))}
+      </PopoverContent>
+    </Popover>
   );
 };

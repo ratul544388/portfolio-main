@@ -24,7 +24,7 @@ export const Header = () => {
         </Suspense>
         <div className="flex items-center gap-3">
           <SocialLinks />
-          <ThemeToggler className="hidden md:block" />
+          <ThemeToggler className="hidden md:flex" />
           <Suspense>
             <MobileMenu />
           </Suspense>
