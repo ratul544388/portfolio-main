@@ -132,14 +132,14 @@ export const projects: ProjectType[] = [
     image: gymImage,
     category: "management",
     githubLink: "https://github.com/ratul544388/gym-admin-management",
-    deployedLink: "https://afsg.vercel.app/",
+    deployedLink: "https://gym-admin-management.vercel.app/",
   },
   {
     name: "Twitter Clone",
     image: twitterCloneImage,
     category: "social media",
-    githubLink: "https://github.com/ratul544388/Twitter-clone-next-14",
-    deployedLink: "https://twitter-clone-next-14.vercel.app",
+    githubLink: "https://github.com/ratul544388/twitter-clone",
+    deployedLink: "https://twitter-clone-next-15.vercel.app/",
   },
   {
     name: "Mern-blog-app",

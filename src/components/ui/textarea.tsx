@@ -25,7 +25,7 @@ const Textarea = React.forwardRef<
       />
       <span
         className={cn(
-          "pointer-events-none absolute left-1.5 top-3 px-2 text-sm text-gray-400 transition-all peer-focus:top-[-10px] peer-focus:bg-foreground peer-focus:text-xs peer-focus:text-primary dark:text-muted-foreground",
+          "pointer-events-none absolute left-1.5 top-3 px-2 text-sm text-gray-400 transition-all peer-focus:top-[-10px] peer-focus:bg-background-2 peer-focus:text-xs peer-focus:text-primary dark:text-muted-foreground",
           props.value && "top-[-10px] bg-foreground text-xs",
         )}
       >

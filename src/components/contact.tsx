@@ -18,7 +18,7 @@ import { myEmail } from "@/constants";
 import { useToast } from "@/hooks/use-toast";
 import { ContactSchema } from "@/validations";
 import { Mail, MousePointer2 } from "lucide-react";
-import { useTransition } from "react";
+import { useMemo, useTransition } from "react";
 import { Container } from "./container";
 import { Heading } from "./heading";
 import { RevealAnimation } from "./reveal-animation";
@@ -90,60 +90,65 @@ const ContactForm = () => {
     });
   }
 
-  return (
-    <WhileInView y={50} className="w-full">
-      <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit)}
-          className="mx-auto mt-14 flex w-full max-w-[600px] flex-col gap-8"
-        >
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input label="Full Name" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input label="Email" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Textarea
-                    className="resize-none pr-40"
-                    label="Message"
-                    {...field}
-                    rows={8}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button className="ml-auto" disabled={isPending}>
-            Send
-            <MousePointer2 className="size-5 rotate-[135deg]" />
-          </Button>
-        </form>
-      </Form>
-    </WhileInView>
-  );
+  const renderedForm = useMemo(() => {
+    return (
+      <WhileInView y={50} className="w-full">
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="mx-auto mt-14 flex w-full max-w-[600px] flex-col gap-8"
+          >
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input label="Full Name" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input label="Email" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Textarea
+                      className="resize-none pr-40"
+                      label="Message"
+                      {...field}
+                      rows={8}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <Button className="ml-auto" disabled={isPending}>
+              Send
+              <MousePointer2 className="size-5 rotate-[135deg]" />
+            </Button>
+          </form>
+        </Form>
+      </WhileInView>
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return renderedForm;
 };

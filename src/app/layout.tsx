@@ -1,11 +1,11 @@
+import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { Toaster } from "@/components/ui/toaster";
+import { fonts } from "@/fonts";
+import { SmoothScrollProvider } from "@/providers/smooth-scroll-provider";
+import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
 import "./globals.css";
-import { fonts } from "@/fonts";
-import { Footer } from "@/components/footer";
-import { SmoothScrollProvider } from "@/providers/smooth-scroll-provider";
-import { Toaster } from "@/components/ui/toaster";
-import { ThemeProvider } from "@/providers/theme-provider";
 
 export const metadata: Metadata = {
   title: {
@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
-      <body className={`${fonts} antialiased`}>
+      <body className={`${fonts} antialiased overflow-hidden`}>
         <SmoothScrollProvider>
           <ThemeProvider
             attribute="class"

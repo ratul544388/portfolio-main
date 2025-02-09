@@ -39,7 +39,7 @@ export const Intro = () => {
           </RevealAnimation>
         </Description>
         <WhileInView
-          scale={0}
+          scale={0.6}
           y={50}
           className="mt-7 flex justify-center gap-4 lg:justify-start"
         >
@@ -68,7 +68,7 @@ export const Intro = () => {
         </WhileInView>
       </div>
       <WhileInView
-        scale={0}
+        scale={0.6}
         className="relative h-[300px] md:h-[500px] lg:h-[400px]"
       >
         <Image

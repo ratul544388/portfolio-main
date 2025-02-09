@@ -7,7 +7,7 @@ import { motion, Variants } from "framer-motion";
 import { Earth, Rocket } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { Container } from "./container";
 import { SectionHeading } from "./section-heading";
@@ -18,13 +18,14 @@ export const Projects = () => {
   const [activeCategory, setActiveCategory] =
     useState<ProjectCategoryType>("all projects");
 
+  const sectionHeading = useMemo(
+    () => <SectionHeading icon={Rocket}>Projects</SectionHeading>,
+    [],
+  );
+
   return (
-    <Container
-      id="projects"
-      className="scroll-margin-top mt-20"
-      elem="section"
-    >
-      <SectionHeading icon={Rocket}>Projects</SectionHeading>
+    <Container id="projects" className="scroll-margin-top mt-20" elem="section">
+      {sectionHeading}
       <ProjectCategories
         activeCategory={activeCategory}
         onChange={setActiveCategory}
@@ -42,7 +43,11 @@ const ProjectCategories = ({
   onChange: (category: ProjectCategoryType) => void;
 }) => {
   return (
-    <WhileInView elem="ul" y={80} className="mx-auto mt-12 flex w-fit flex-wrap justify-center gap-4 rounded-3xl border shadow-sm lg:rounded-full">
+    <WhileInView
+      elem="ul"
+      y={80}
+      className="mx-auto mt-12 flex w-fit flex-wrap justify-center gap-4 rounded-3xl border shadow-sm lg:rounded-full"
+    >
       {projectCategories.map((c, i) => {
         const isActive = c === activeCategory;
         return (
@@ -149,9 +154,9 @@ const Project = ({ project }: { project: ProjectType }) => {
     <motion.article
       initial="initial"
       whileHover="hovered"
-      className="relative bg-background rounded-md cursor-pointer overflow-hidden border shadow-sm"
+      className="relative cursor-pointer overflow-hidden rounded-md border bg-background shadow-sm"
     >
-      <div className="xs:h-[150px] relative h-[100px] w-full shadow-sm hover:shadow-md">
+      <div className="relative h-[100px] w-full shadow-sm hover:shadow-md xs:h-[150px]">
         <Image
           src={image}
           alt={name}
@@ -170,7 +175,7 @@ const Project = ({ project }: { project: ProjectType }) => {
             href={githubLink}
             className={cn(buttonVariants({ variant: "outline" }), "w-full")}
           >
-            <span className="sm:xs:block hidden">Github</span>
+            <span className="hidden sm:xs:block">Github</span>
             <FaGithub className="size-4" />
           </Link>
           <Link
@@ -178,7 +183,7 @@ const Project = ({ project }: { project: ProjectType }) => {
             href={deployedLink}
             className={cn(buttonVariants({ variant: "outline" }), "w-full")}
           >
-            <span className="sm:xs:block hidden">Live</span>
+            <span className="hidden sm:xs:block">Live</span>
             <Earth className="size-4" />
           </Link>
         </div>
