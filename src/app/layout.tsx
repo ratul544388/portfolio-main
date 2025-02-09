@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
-      <body className={`${fonts} antialiased overflow-hidden`}>
+      <body className={`${fonts} antialiased`}>
         <SmoothScrollProvider>
           <ThemeProvider
             attribute="class"
