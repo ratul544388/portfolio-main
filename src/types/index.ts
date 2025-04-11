@@ -9,6 +9,7 @@ export type ProjectType = {
     category?: ProjectCategoryType
     githubLink: string;
     deployedLink: string;
+    rating: number;
 }
 
 export type ColorType = "background" | "foreground" | "primary" | "white"

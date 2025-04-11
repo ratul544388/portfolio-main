@@ -112,6 +112,7 @@ export const projects: ProjectType[] = [
     category: "ecommerce",
     githubLink: "https://github.com/ratul544388/ecommerce",
     deployedLink: "https://ecommerce-coral-delta.vercel.app",
+    rating: 4.5,
   },
   {
     name: "Digital Marketplace",
@@ -119,6 +120,7 @@ export const projects: ProjectType[] = [
     category: "ecommerce",
     githubLink: "https://github.com/ratul544388/digital-marketplace",
     deployedLink: "https://digital-marketplace-rouge.vercel.app",
+    rating: 4,
   },
   {
     name: "Waffles",
@@ -126,6 +128,7 @@ export const projects: ProjectType[] = [
     category: "ecommerce",
     githubLink: "https://github.com/ratul544388/waffle",
     deployedLink: "https://waffle-two.vercel.app/",
+    rating: 5,
   },
   {
     name: "Gym Admin Management",
@@ -133,6 +136,7 @@ export const projects: ProjectType[] = [
     category: "management",
     githubLink: "https://github.com/ratul544388/gym-admin-management",
     deployedLink: "https://gym-admin-management.vercel.app/",
+    rating: 5,
   },
   {
     name: "Twitter Clone",
@@ -140,6 +144,7 @@ export const projects: ProjectType[] = [
     category: "social media",
     githubLink: "https://github.com/ratul544388/twitter-clone",
     deployedLink: "https://twitter-clone-next-15.vercel.app/",
+    rating: 5,
   },
   {
     name: "Mern-blog-app",
@@ -147,6 +152,7 @@ export const projects: ProjectType[] = [
     category: "social media",
     githubLink: "https://github.com/ratul544388/mern-blog-app",
     deployedLink: "https://mern-blog-app-kij0.onrender.com/",
+    rating: 3.5,
   },
   {
     name: "Food Ordering App",
@@ -154,6 +160,7 @@ export const projects: ProjectType[] = [
     category: "ecommerce",
     githubLink: "https://github.com/ratul544388/quick-bite",
     deployedLink: "https://quick-bite-eosin.vercel.app",
+    rating: 3.5,
   },
   {
     name: "Blog App",
@@ -161,6 +168,7 @@ export const projects: ProjectType[] = [
     category: "social media",
     githubLink: "https://github.com/ratul544388/blog-app",
     deployedLink: "https://blog-app-chi-drab.vercel.app",
+    rating: 3,
   },
   {
     name: "Doctor Booking App",
@@ -168,6 +176,7 @@ export const projects: ProjectType[] = [
     category: "booking",
     githubLink: "https://github.com/ratul544388/Doctor-Booking-App",
     deployedLink: "https://doctor-booking-app.vercel.app",
+    rating: 3.5,
   },
   {
     name: "Portfolio 1",
@@ -175,6 +184,7 @@ export const projects: ProjectType[] = [
     category: "portfolio",
     githubLink: "https://github.com/ratul544388/portfolio-1",
     deployedLink: "https://ratulcodes-1.vercel.app",
+    rating: 3.5,
   },
   {
     name: "Portfolio 2",
@@ -182,6 +192,7 @@ export const projects: ProjectType[] = [
     category: "portfolio",
     githubLink: "https://github.com/ratul544388/portfolio-2",
     deployedLink: "https://ratulcodes-2.vercel.app",
+    rating: 4,
   },
   {
     name: "Portfolio 3",
@@ -189,6 +200,7 @@ export const projects: ProjectType[] = [
     category: "portfolio",
     githubLink: "https://github.com/ratul544388/portfolio-3",
     deployedLink: "https://ratulcodes-3.vercel.app",
+    rating: 5,
   },
   {
     name: "Portfolio 4",
@@ -196,6 +208,7 @@ export const projects: ProjectType[] = [
     category: "portfolio",
     githubLink: "https://github.com/ratul544388/portfolio-4",
     deployedLink: "https://ratulcodes-4.vercel.app",
+    rating: 3.5,
   },
   {
     name: "Portfolio 5",
@@ -203,7 +216,8 @@ export const projects: ProjectType[] = [
     category: "portfolio",
     githubLink: "https://github.com/ratul544388/portfolio-5",
     deployedLink:
-      "https://ratulcodes-5.vercel.apphttps://ostad-assignment-1.onrender.com",
+    "https://ratulcodes-5.vercel.apphttps://ostad-assignment-1.onrender.com",
+    rating: 2.5,
   },
   {
     name: "Calm Landing Page",
@@ -211,6 +225,7 @@ export const projects: ProjectType[] = [
     category: "landing page",
     githubLink: "https://github.com/ratul544388/calm-landing-page",
     deployedLink: "https://calm-landing-page.vercel.app/",
+    rating: 4,
   },
   {
     name: "University Landing Page",
@@ -218,7 +233,8 @@ export const projects: ProjectType[] = [
     category: "landing page",
     githubLink: "https://github.com/ratul544388/university-landing-page",
     deployedLink:
-      "https://university-landing-page-7jiet8en9-ratul544388.vercel.app/",
+    "https://university-landing-page-7jiet8en9-ratul544388.vercel.app/",
+    rating: 4,
   },
   {
     name: "Grass Root Landing Page",
@@ -227,6 +243,7 @@ export const projects: ProjectType[] = [
     githubLink:
       "https://github.com/ratul544388/grass-root-farmers-landing-page",
     deployedLink: "https://grass-root-farmers-landing-page.vercel.app/",
+    rating: 4,
   },
   {
     name: "Car Booking App",
@@ -234,19 +251,22 @@ export const projects: ProjectType[] = [
     category: "booking",
     githubLink: "https://github.com/ratul544388/car-hub",
     deployedLink:
-      "https://portfolio-two-sepia-49.vercel.app/https://car-hub-dusky-eta.vercel.app",
+    "https://portfolio-two-sepia-49.vercel.app/https://car-hub-dusky-eta.vercel.app",
+    rating: 2,
   },
   {
     name: "Mern Note App",
     image: mernNoteAppImage,
     githubLink: "https://github.com/ratul544388/mern-note-app",
     deployedLink: "https://mern-note-app-qyl8.onrender.com/",
+    rating: 2,
   },
   {
     name: "Simple Projects",
     image: simpleProjectsImage,
     githubLink: "https://github.com/ratul544388/mini-projects",
     deployedLink: "https://mini-projects-zeta.vercel.app",
+    rating: 3.5,
   },
 ];
 
