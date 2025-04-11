@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import { ColorType } from "@/types";
 import { motion, Variants } from "framer-motion";
+import { useMemo } from "react";
 
 const leftVariants: Variants = {
   initial: {
@@ -40,11 +41,11 @@ export const RevealAnimation = ({
   threshold = 0.3,
   elem = "span",
 }: RevealAnimatedTextProps) => {
-  const MotionElement = motion.create(elem)
+  const MotionElement = useMemo(() => motion.create(elem), [elem]);
   return (
     <MotionElement
       className={cn(
-        "relative w-fit inline-block",
+        "relative inline-block w-fit",
         color === "primary" && "bg-gradient bg-clip-text text-transparent",
         color === "white" && "text-white",
         className,

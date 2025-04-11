@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { ReactNode, useMemo } from "react";
 
 interface WhileInViewProps {
   x?: number | string;
@@ -12,7 +12,7 @@ interface WhileInViewProps {
   children: ReactNode;
   className?: string;
   once?: boolean;
-  elem?: "div" | "ul" | "li" | "span"
+  elem?: "div" | "ul" | "li" | "span";
 }
 
 export const WhileInView = ({
@@ -25,9 +25,9 @@ export const WhileInView = ({
   children,
   className,
   once = true,
-  elem: Elem = "div",
+  elem = "div",
 }: WhileInViewProps) => {
-  const MotionElement = motion.create(Elem);
+  const MotionElement = useMemo(() => motion.create(elem), [elem]);
   return (
     <MotionElement
       whileInView={{

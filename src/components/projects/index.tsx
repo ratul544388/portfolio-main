@@ -2,7 +2,7 @@
 
 import { ProjectCategoryType } from "@/types";
 import { Rocket } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { Container } from "../container";
 import { SectionHeading } from "../section-heading";
 import { Categories } from "./categories";
@@ -12,14 +12,9 @@ export const Projects = () => {
   const [activeCategory, setActiveCategory] =
     useState<ProjectCategoryType>("all projects");
 
-  const sectionHeading = useMemo(
-    () => <SectionHeading icon={Rocket}>Projects</SectionHeading>,
-    [],
-  );
-
   return (
     <Container id="projects" className="scroll-margin-top mt-20" elem="section">
-      {sectionHeading}
+      <SectionHeading icon={Rocket}>Projects</SectionHeading>
       <Categories
         activeCategory={activeCategory}
         onChange={setActiveCategory}
