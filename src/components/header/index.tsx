@@ -10,7 +10,7 @@ import { SocialLinks } from "./social-links";
 
 export const Header = () => {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 h-20 bg-background/50 backdrop-blur-xl">
+    <header className="fixed border-b inset-x-0 top-0 z-50 h-20 bg-background/50 backdrop-blur-xl">
       <Container
         elem="header"
         className="flex h-full items-center justify-between"
@@ -19,7 +19,7 @@ export const Header = () => {
         <DesktopNavLinks/>
         <div className="flex items-center gap-3">
           <SocialLinks />
-          <ThemeToggler className="hidden md:flex" />
+          <ThemeToggler />
           <Suspense>
             <MobileMenu />
           </Suspense>

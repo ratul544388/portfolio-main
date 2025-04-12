@@ -2,7 +2,7 @@ import { projectCategories } from "@/constants";
 import { cn } from "@/lib/utils";
 import { ProjectCategoryType } from "@/types";
 import { motion } from "framer-motion";
-import { WhileInView } from "../while-in-view";
+import { WhileInView } from "@/components/while-in-view";
 
 export const Categories = ({
   activeCategory,

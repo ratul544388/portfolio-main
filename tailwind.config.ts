@@ -79,9 +79,25 @@ export default {
             transform: "perspective(1000px) rotateX(-16deg) rotateY(360deg)",
           },
         },
+        borderAnimation: {
+          "0%": {
+            transform: "rotate(0deg)",
+            left: "13%",
+            top: "-15%",
+          },
+          "50%": {
+            left: "-30%",
+          },
+          "100%": {
+            transform: "rotate(-360deg)",
+            left: "13%",
+            top: "0%",
+          },
+        },
       },
       animation: {
         autoRun: "autoRun 15s linear infinite",
+        borderAnimation: "borderAnimation 6s linear infinite",
       },
     },
   },

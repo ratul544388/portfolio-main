@@ -17,7 +17,7 @@ import { Star } from "lucide-react";
 
 export const Reviews = () => {
   return (
-    <section className="mt-28 w-full select-none bg-background-2 pb-24 pt-20 text-white [clip-path:polygon(32%_0,100%_17%,100%_100%,0_99%,0_19%)] lg:[clip-path:polygon(14%_0,100%_16%,100%_100%,0%_100%)]">
+    <section className="mt-28 w-full select-none bg-background-2 pb-24 pt-20 [clip-path:polygon(32%_0,100%_17%,100%_100%,0_99%,0_19%)] lg:[clip-path:polygon(14%_0,100%_16%,100%_100%,0%_100%)]">
       <SectionHeading color="primary" icon={Star} className="text-primary">
         Reviews
       </SectionHeading>
@@ -50,21 +50,15 @@ export const Reviews = () => {
                   <h5 className="mt-2 font-chakra_petch text-sm font-medium">
                     {name}
                   </h5>
-                  <p className="font-chakra_petch text-sm text-slate-300">
+                  <p className="font-chakra_petch text-sm text-muted-foreground">
                     @{username}
                   </p>
                 </CarouselItem>
               ))}
             </CarouselContent>
             <div className="absolute -bottom-10 left-1/2 z-20 flex -translate-x-1/2 gap-3">
-              <CarouselPrevious
-                className="bg-background/10 hover:bg-background/20 hover:text-white"
-                variant="ghost"
-              />
-              <CarouselNext
-                className="bg-background/10 hover:bg-background/20 hover:text-white"
-                variant="ghost"
-              />
+              <CarouselPrevious variant="ghost" />
+              <CarouselNext variant="ghost" />
             </div>
           </Carousel>
         </Container>

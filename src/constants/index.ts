@@ -1,4 +1,14 @@
-import { FaBriefcase, FaFacebook, FaGithub, FaHome, FaLightbulb, FaLinkedin, FaPhoneAlt, FaRocket, FaTwitter } from "react-icons/fa";
+import {
+  FaBriefcase,
+  FaFacebook,
+  FaGithub,
+  FaHome,
+  FaLightbulb,
+  FaLinkedin,
+  FaPhoneAlt,
+  FaRocket,
+  FaTwitter,
+} from "react-icons/fa";
 
 export const myTwitterLink = "https://twitter.com/Ratul2582";
 export const myGithubLink = "https://github.com/ratul544388";
@@ -30,11 +40,11 @@ import simpleProjectsImage from "@/../public/projects/simple-projects.webp";
 import twitterCloneImage from "@/../public/projects/twitter-clone.webp";
 import universityLandingPageImage from "@/../public/projects/university-landing-page.webp";
 import wafflesImage from "@/../public/projects/waffles.webp";
-import stackCardImageAnimation from '@/../public/stack-cards-images/animation.jpg';
-import stackCardImagebackend from '@/../public/stack-cards-images/backend.jpg';
-import stackCardImageFigma from '@/../public/stack-cards-images/figma.jpg';
-import stackCardImageFullStack from '@/../public/stack-cards-images/full-stack.jpg';
-import stackCardImageUILibraries from '@/../public/stack-cards-images/ui-ilbraries.jpg';
+import stackCardImageAnimation from "@/../public/stack-cards-images/animation.jpg";
+import stackCardImagebackend from "@/../public/stack-cards-images/backend.jpg";
+import stackCardImageFigma from "@/../public/stack-cards-images/figma.jpg";
+import stackCardImageFullStack from "@/../public/stack-cards-images/full-stack.jpg";
+import stackCardImageUILibraries from "@/../public/stack-cards-images/ui-ilbraries.jpg";
 
 import { ProjectType } from "@/types";
 import { TbBrandFiverr } from "react-icons/tb";
@@ -43,27 +53,27 @@ export const navLinks = [
   {
     icon: FaHome,
     label: "Home",
-    href: "",
+    href: "/",
   },
   {
     icon: FaBriefcase,
     label: "About",
-    href: "#about",
+    href: "/about",
   },
   {
     icon: FaRocket,
     label: "Projects",
-    href: "#projects",
+    href: "/projects",
   },
   {
     icon: FaLightbulb,
     label: "Skills",
-    href: "#skills",
+    href: "/skills",
   },
   {
     icon: FaPhoneAlt,
     label: "Contact",
-    href: "#contact",
+    href: "/contact",
   },
 ];
 
@@ -216,7 +226,7 @@ export const projects: ProjectType[] = [
     category: "portfolio",
     githubLink: "https://github.com/ratul544388/portfolio-5",
     deployedLink:
-    "https://ratulcodes-5.vercel.apphttps://ostad-assignment-1.onrender.com",
+      "https://ratulcodes-5.vercel.apphttps://ostad-assignment-1.onrender.com",
     rating: 2.5,
   },
   {
@@ -233,7 +243,7 @@ export const projects: ProjectType[] = [
     category: "landing page",
     githubLink: "https://github.com/ratul544388/university-landing-page",
     deployedLink:
-    "https://university-landing-page-7jiet8en9-ratul544388.vercel.app/",
+      "https://university-landing-page-7jiet8en9-ratul544388.vercel.app/",
     rating: 4,
   },
   {
@@ -251,7 +261,7 @@ export const projects: ProjectType[] = [
     category: "booking",
     githubLink: "https://github.com/ratul544388/car-hub",
     deployedLink:
-    "https://portfolio-two-sepia-49.vercel.app/https://car-hub-dusky-eta.vercel.app",
+      "https://portfolio-two-sepia-49.vercel.app/https://car-hub-dusky-eta.vercel.app",
     rating: 2,
   },
   {
@@ -338,31 +348,32 @@ export const backendSkills = [
 export const stackCards = [
   {
     title: "Figma to Pixel-Perfect Code",
-    description: "I transform Figma designs into responsive, high-quality code using Tailwind CSS or standard CSS. My focus is on pixel-perfect accuracy, clean structure, and cross-device compatibility. By maintaining best coding practices, I ensure that every design translates seamlessly into a functional, fast-loading, and visually stunning user interface.",
+    description:
+      "I transform Figma designs into responsive, high-quality code using Tailwind CSS or standard CSS. My focus is on pixel-perfect accuracy, clean structure, and cross-device compatibility. By maintaining best coding practices, I ensure that every design translates seamlessly into a functional, fast-loading, and visually stunning user interface.",
     image: stackCardImageFigma,
   },
   {
     title: "Creating Stunning Animations",
-    description: "Using Framer Motion and GSAP, I create smooth, engaging animations that enhance user experience. Whether it's subtle micro-interactions or complex motion effects, my animations are performance-optimized and visually appealing. I ensure fluid transitions and interactive elements that make web applications feel dynamic, intuitive, and immersive.",
+    description:
+      "Using Framer Motion and GSAP, I create smooth, engaging animations that enhance user experience. Whether it's subtle micro-interactions or complex motion effects, my animations are performance-optimized and visually appealing. I ensure fluid transitions and interactive elements that make web applications feel dynamic, intuitive, and immersive.",
     image: stackCardImageAnimation,
   },
   {
     title: "Modern UI with Top Libraries",
-    description: "I build sleek, modern interfaces using UI libraries like ShadCN, Flowbite, and DaisyUI. These tools help me develop visually appealing, highly functional, and responsive designs. By leveraging pre-built, customizable components, I ensure fast development while maintaining a clean and user-friendly experience across different screen sizes and devices.",
+    description:
+      "I build sleek, modern interfaces using UI libraries like ShadCN, Flowbite, and DaisyUI. These tools help me develop visually appealing, highly functional, and responsive designs. By leveraging pre-built, customizable components, I ensure fast development while maintaining a clean and user-friendly experience across different screen sizes and devices.",
     image: stackCardImageUILibraries,
   },
   {
     title: "Scalable Backend Development",
-    description: "I develop scalable, high-performance backends using Node.js, Next.js, Express, MongoDB, PostgreSQL, Prisma, and Drizzle. My expertise lies in creating secure APIs, handling databases efficiently, and optimizing performance. I ensure seamless server-side functionality that supports fast, reliable, and maintainable web applications for various use cases.",
+    description:
+      "I develop scalable, high-performance backends using Node.js, Next.js, Express, MongoDB, PostgreSQL, Prisma, and Drizzle. My expertise lies in creating secure APIs, handling databases efficiently, and optimizing performance. I ensure seamless server-side functionality that supports fast, reliable, and maintainable web applications for various use cases.",
     image: stackCardImagebackend,
   },
   {
     title: "Full-Stack Web Development",
-    description: "As a full-stack developer, I build robust applications using React, Next.js, and TypeScript. I specialize in crafting responsive frontends and scalable backends, ensuring seamless user experiences. My expertise includes state management, API integrations, and database handling, allowing me to develop high-quality, end-to-end web solutions.",
+    description:
+      "As a full-stack developer, I build robust applications using React, Next.js, and TypeScript. I specialize in crafting responsive frontends and scalable backends, ensuring seamless user experiences. My expertise includes state management, API integrations, and database handling, allowing me to develop high-quality, end-to-end web solutions.",
     image: stackCardImageFullStack,
-  }
+  },
 ];
-
-
-
-

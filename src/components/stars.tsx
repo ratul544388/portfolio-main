@@ -9,7 +9,7 @@ interface StarsProps {
 
 export const Stars = ({ rating }: StarsProps) => {
   return (
-    <div className="mb-4 ml-4 mt-1 flex gap-2">
+    <div className="mb-4 mt-2 flex gap-2">
       {Array.from({ length: 5 }).map((_, i) => {
         const current = i + 1;
 

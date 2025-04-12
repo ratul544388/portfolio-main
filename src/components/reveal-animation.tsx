@@ -45,9 +45,8 @@ export const RevealAnimation = ({
   return (
     <MotionElement
       className={cn(
-        "relative inline-block w-fit",
+        "relative inline-block w-fit text-foreground",
         color === "primary" && "bg-gradient bg-clip-text text-transparent",
-        color === "white" && "text-white",
         className,
       )}
     >
@@ -64,9 +63,8 @@ export const RevealAnimation = ({
           delay,
         }}
         className={cn(
-          "absolute block bg-black dark:bg-white",
+          "absolute block bg-foreground",
           color === "primary" && "bg-primary dark:bg-primary",
-          color === "white" && "bg-white",
           animateFrom === "left" ? "inset-y-0 right-0" : "inset-x-0 bottom-0",
         )}
       />

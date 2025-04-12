@@ -10,9 +10,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: {
     template: "%s | Portfolio",
-    default: "Portfolio | Ratul",
+    default: "Portfolio | Home",
   },
-  description: "Hello there, welcome to  my portfolio",
+  description:
+    "Hello there, my name is Ratul. I'm A full stack web developer, spacialize in React & Next.Js",
 };
 
 export default function RootLayout({
@@ -22,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
-      <body className={`${fonts} antialiased`}>
+      <body className={`${fonts} flex flex-col pt-20 antialiased`}>
         <SmoothScrollProvider>
           <ThemeProvider
             attribute="class"

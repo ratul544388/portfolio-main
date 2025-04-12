@@ -9,10 +9,11 @@ interface WhileInViewProps {
   opacity?: number;
   delay?: number;
   duration?: number;
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
   once?: boolean;
-  elem?: "div" | "ul" | "li" | "span";
+  elem?: "div" | "ul" | "li" | "span" | "p" | "button",
+  onClick?: () => void;
 }
 
 export const WhileInView = ({
@@ -26,6 +27,7 @@ export const WhileInView = ({
   className,
   once = true,
   elem = "div",
+  onClick,
 }: WhileInViewProps) => {
   const MotionElement = useMemo(() => motion.create(elem), [elem]);
   return (
@@ -39,6 +41,7 @@ export const WhileInView = ({
       viewport={{ once, amount: 0.3 }}
       transition={{ duration, delay }}
       className={cn("opacity-0", className)}
+      onClick={onClick}
     >
       {children}
     </MotionElement>

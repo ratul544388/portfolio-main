@@ -1,20 +1,18 @@
 import { navLinks } from "@/constants";
-import { motion } from "framer-motion";
-import { useRouterHash } from "@/hooks/use-router-hash";
-import Link from "next/link";
-import { Suspense } from "react";
-import { buttonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { buttonVariants } from "../ui/button";
 
 export const DesktopNavLinks = () => {
-    const hash = useRouterHash();
+    const pathname = usePathname();
   
     return (
-      <Suspense fallback="">
         <nav className="hidden sm:block">
           <ul className="flex">
             {navLinks.map(({ label, href }) => {
-              const isActive = hash === href;
+              const isActive = href === pathname;
               return (
                 <li key={label}>
                   <Link
@@ -37,6 +35,5 @@ export const DesktopNavLinks = () => {
             })}
           </ul>
         </nav>
-      </Suspense>
     );
   };

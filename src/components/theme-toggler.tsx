@@ -1,76 +1,113 @@
 "use client";
 
-import { Check, MonitorCogIcon, Moon, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import * as React from "react";
 
 import { Button } from "@/components/ui/button";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+import { motion, useAnimate } from "framer-motion";
+import { useMounted } from "@/hooks/use-mounted";
 import { cn } from "@/lib/utils";
+import { Skeleton } from "./ui/skeleton";
 
-export const ThemeToggler = ({
-  className,
-  align = "end",
-}: {
-  className?: string;
-  align?: "start" | "end" | "center";
-}) => {
+export const ThemeToggler = () => {
+  const [scope, animate] = useAnimate();
   const { theme, setTheme } = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const isMounted = useMounted();
 
-  const themes = [
-    {
-      name: "light",
-      icon: Sun,
-    },
-    {
-      name: "dark",
-      icon: Moon,
-    },
-    {
-      name: "system",
-      icon: MonitorCogIcon,
-    },
-  ];
+  if (!isMounted) {
+    return <Skeleton className="size-9 rounded-md border"/>
+  }
+
+  const handleChangeTheme = () => {
+    animate([
+      [
+        "#icon-wrapper",
+        { top: theme === "dark" ? -27 : 10 },
+        { duration: 0.3 },
+      ],
+      [
+        "#bubble",
+        {
+          opacity: 1,
+          height: 0,
+          width: 0,
+        },
+        {
+          duration: 0.00001,
+          at: "<",
+        },
+      ],
+      [
+        "#bubble",
+        {
+          height: "100vh",
+          width: "100vw",
+          top: 0,
+          right: 0,
+        },
+        {
+          duration: 0.3,
+        },
+      ],
+      [
+        "#bubble",
+        {
+          opacity: 0,
+        },
+        {
+          duration: 0.3,
+          at: 0.4,
+        },
+      ],
+    ]);
+    setTimeout(() => setTheme(theme === "dark" ? "light" : "dark"), 300);
+  };
+
+  const SunIcon = motion.create(Sun);
+  const MoonIcon = motion.create(Moon);
 
   return (
-    <Popover open={open} onOpenChange={setOpen}>
-      <PopoverTrigger asChild>
-        <Button
-          variant="outline"
-          className={cn("size-fit rounded-full p-2 px-4 sm:px-2", className)}
+    <div ref={scope} className="relative">
+      <Button
+        onClick={handleChangeTheme}
+        className="relative z-10 overflow-hidden"
+        variant="outline"
+        size="icon"
+      >
+        <span
+          id="icon-wrapper"
+          className={cn(
+            "absolute space-y-5 top-[10px] dark:top-[-27px]",
+          )}
         >
-          <span className="sm:sr-only">Theme</span>
-          <Sun className="size-4 dark:hidden" />
-          <Moon className="hidden size-4 dark:block" />
-        </Button>
-      </PopoverTrigger>
-      <PopoverContent align={align} className="flex w-fit flex-col p-0 py-2">
-        {themes.map(({ name, icon: Icon }) => (
-          <Button
-            key={name}
-            variant="ghost"
-            className="w-full justify-start rounded-none capitalize"
-            onClick={() => {
-              setTheme(name);
-              setOpen(false);
+          <SunIcon
+            id="sun-icon"
+            initial={{
+              ...(theme === "dark"
+                ? {
+                    top: 50,
+                  }
+                : {}),
             }}
-          >
-            <Icon />
-            {name}
-            <Check
-              className={cn(
-                "ml-auto size-4 opacity-0",
-                theme === name && "opacity-100",
-              )}
-            />
-          </Button>
-        ))}
-      </PopoverContent>
-    </Popover>
+            className="size-4"
+          />
+          <MoonIcon
+            id="moon-icon"
+            initial={{
+              ...(theme === "light"
+                ? {
+                    top: 50,
+                  }
+                : {}),
+            }}
+            className="size-4"
+          />
+        </span>
+      </Button>
+      <span
+        id="bubble"
+        className="fixed pointer-events-none right-10 top-10 block w-0 bg-foreground"
+      />
+    </div>
   );
 };
