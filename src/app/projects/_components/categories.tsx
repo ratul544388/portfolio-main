@@ -13,6 +13,9 @@ export const Categories = ({
 }) => {
   return (
     <WhileInView
+      delay={0.5}
+      y={10}
+      scale={0.8}
       elem="ul"
       className="mx-auto mt-12 flex w-fit flex-wrap justify-center gap-4 rounded-3xl border shadow-sm lg:rounded-full"
     >

@@ -3,12 +3,15 @@
 import { cn } from "@/lib/utils";
 import { VariantProps } from "class-variance-authority";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 import React from "react";
 import { buttonVariants } from "./ui/button";
 
 interface HoverButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {}
+    VariantProps<typeof buttonVariants> {
+  href?: string;
+}
 
 export const HoverButton = ({
   children,
@@ -16,6 +19,7 @@ export const HoverButton = ({
   variant,
   size,
   cut,
+  href,
 }: HoverButtonProps) => {
   const variants: Variants = {
     initial: {
@@ -28,17 +32,20 @@ export const HoverButton = ({
     },
   };
 
+  const Elem = motion.create(href ? Link : "button");
+
   return (
-    <motion.button
+    <Elem
+      href={href}
       initial="initial"
       whileHover="hovered"
       className={cn(
         "relative overflow-hidden transition-colors duration-200 dark:hover:text-black",
         buttonVariants({ variant, size, cut, className }),
-        variant === "foreground" && "dark:hover:text-white",
+        variant === "secondary" && "dark:hover:text-white",
       )}
     >
-      <span className="z-10">{children}</span>
+      <span className="z-10 flex items-center gap-2">{children}</span>
       <motion.span
         variants={variants}
         transition={{
@@ -46,9 +53,9 @@ export const HoverButton = ({
         }}
         className={cn(
           "absolute inset-0 bg-foreground",
-          variant === "foreground" && "bg-primary",
+          variant === "secondary" && "bg-primary",
         )}
       />
-    </motion.button>
+    </Elem>
   );
 };

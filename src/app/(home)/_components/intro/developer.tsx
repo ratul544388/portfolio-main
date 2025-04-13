@@ -60,11 +60,11 @@ export const Developer = () => {
           <div className="ml-4 space-y-1">
             <WhileInView delay={0.3} duration={0.5} x={-20}>
               <span className="text-red-400 dark:text-red-300/80">name</span>:&nbsp;&nbsp;
-              <span className="text-green-400 dark:text-green-300/80">{'"Ratul Hossain"'}</span>,
+              <span className="text-green-500 dark:text-green-300/80">{'"Ratul Hossain"'}</span>,
             </WhileInView>
             <WhileInView delay={0.5} duration={0.5} x={-20}>
               <span className="text-red-400 dark:text-red-300/80">title</span>:&nbsp;&nbsp;
-              <span className="text-green-400 dark:text-green-300/80">{'"Web Developer"'}</span>,
+              <span className="text-green-500 dark:text-green-300/80">{'"Web Developer"'}</span>,
             </WhileInView>
             <p>
               <WhileInView
@@ -89,7 +89,7 @@ export const Developer = () => {
                 {"["}
               </WhileInView>
               <br />
-              <span className="ml-4 mt-1 flex flex-wrap gap-2 text-green-400 dark:text-green-300/80">
+              <span className="ml-4 mt-1 flex flex-wrap gap-2 text-green-500 dark:text-green-300/80">
                 {skills.map((s, i) => (
                   <WhileInView
                     elem="span"

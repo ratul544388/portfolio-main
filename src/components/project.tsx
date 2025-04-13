@@ -10,8 +10,8 @@ export const Project = ({ project }: { project: ProjectType }) => {
   const { name, deployedLink, githubLink, image, rating } = project;
 
   return (
-    <article className="group relative cursor-pointer overflow-hidden rounded-md border bg-background shadow-sm">
-      <div className="relative h-[100px] w-full shadow-sm hover:shadow-md xs:h-[150px]">
+    <article className="group relative cursor-pointer overflow-hidden rounded-md border bg-secondary/20 shadow hover:shadow-md transition-all">
+      <div className="relative h-[150px] w-full shadow-sm hover:shadow-md xs:h-[170px]">
         <Image
           src={image}
           alt={name}
@@ -32,7 +32,7 @@ export const Project = ({ project }: { project: ProjectType }) => {
             href={deployedLink}
             className={cn(buttonVariants({ variant: "outline" }), "w-full")}
           >
-            <FaExternalLinkAlt className="!size-4" />
+            <FaExternalLinkAlt className="!size-3" />
             View Project
           </Link>
           <Link

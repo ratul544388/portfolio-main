@@ -1,6 +1,8 @@
 "use client";
 
 import { Container } from "@/components/container";
+import { Description } from "@/components/description";
+import { Heading } from "@/components/heading";
 import { ProjectCategoryType } from "@/types";
 import { useState } from "react";
 import { Categories } from "./categories";
@@ -10,7 +12,19 @@ export const ProjectsClient = () => {
   const [activeCategory, setActiveCategory] =
     useState<ProjectCategoryType>("all projects");
   return (
-    <Container id="projects" className="scroll-margin-top mt-20" elem="section">
+    <Container
+      id="projects"
+      className="scroll-margin-top mt-10 flex flex-col items-center"
+      elem="section"
+    >
+      <Heading label="Projects" color="primary"/>
+      <Description
+        delay={0.3}
+        className="mt-2 text-center"
+      >
+        Explore my web projects built with modern technologies like React,
+        Next.js, Node.js, and more
+      </Description>
       <Categories
         activeCategory={activeCategory}
         onChange={setActiveCategory}

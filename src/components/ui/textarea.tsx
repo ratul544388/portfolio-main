@@ -12,7 +12,7 @@ const Textarea = React.forwardRef<
     <div className="relative">
       <textarea
         className={cn(
-          "thin-scrollbar peer flex max-h-[200px] min-h-16 w-full resize-none rounded-md border border-white/10 bg-transparent px-3 py-2 text-base placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+          "thin-scrollbar peer flex max-h-[200px] min-h-16 w-full resize-none rounded-md border bg-transparent px-3 pb-2 pt-8 text-base placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
           className,
         )}
         onInput={(e) => {
@@ -25,8 +25,8 @@ const Textarea = React.forwardRef<
       />
       <span
         className={cn(
-          "pointer-events-none absolute left-1.5 top-3 px-2 text-sm text-gray-400 transition-all peer-focus:top-[-10px] peer-focus:bg-background-2 peer-focus:text-xs peer-focus:text-primary dark:text-muted-foreground",
-          props.value && "top-[-10px] bg-foreground text-xs",
+          "pointer-events-none absolute left-1.5 top-3 px-2 text-sm text-primary transition-all peer-focus:left-[5px] peer-focus:top-[10px] peer-focus:text-xs",
+          props.value && "left-[5px] top-[10px] text-xs",
         )}
       >
         {label}

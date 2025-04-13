@@ -23,13 +23,15 @@ const topVariants: Variants = {
   },
 };
 
+export type RevealAnimationFrom = "top" | "left";
+
 interface RevealAnimatedTextProps
   extends React.HTMLAttributes<HTMLParagraphElement> {
   color?: ColorType;
   delay?: number;
-  animateFrom?: "left" | "top";
+  animateFrom?: RevealAnimationFrom;
   threshold?: number;
-  elem?: "span" | "h1" | "p";
+  elem?: "span" | "h1" | "p" | "div"
   invertColor?: boolean;
 }
 export const RevealAnimation = ({

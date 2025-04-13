@@ -12,7 +12,7 @@ interface WhileInViewProps {
   children?: ReactNode;
   className?: string;
   once?: boolean;
-  elem?: "div" | "ul" | "li" | "span" | "p" | "button",
+  elem?: "div" | "ul" | "li" | "span" | "p" | "button" | "section";
   onClick?: () => void;
 }
 
@@ -21,7 +21,7 @@ export const WhileInView = ({
   y = 0,
   scale = 1,
   opacity = 0,
-  duration = 0.3,
+  duration = 0.5,
   delay = 0,
   children,
   className,

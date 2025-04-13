@@ -3,27 +3,30 @@
 import { backendSkills, frontendSkills, stackCards } from "@/constants";
 import { cn } from "@/lib/utils";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
-import { Lightbulb } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import { useRef } from "react";
-import { FaLocationArrow } from "react-icons/fa";
 import { Container } from "./container";
 import { Heading } from "./heading";
 import { Marquee } from "./marquee";
-import { RevealAnimation } from "./reveal-animation";
-import { SectionHeading } from "./section-heading";
+import { FaLocationArrow } from "react-icons/fa";
+import { WhileInView } from "./while-in-view";
 
 export const Skills = () => {
   return (
-    <section className="mx-auto h-full max-w-screen-2xl pt-20" id="skills">
-      <SectionHeading icon={Lightbulb}>Skills</SectionHeading>
+    <section className="mx-auto h-full max-w-screen-2xl pt-20">
+      <Heading className="text-center" label="Skills" />
       <div className="mt-14 flex select-none flex-col items-center gap-6 xs:flex-row xs:pl-5">
-        <Heading elem="h3">
-          <RevealAnimation color="primary" className="flex items-center gap-2">
-            Frontend
-            <FaLocationArrow aria-hidden="true" className="size-5 text-blue-600 rotate-45" />
-          </RevealAnimation>
-        </Heading>
+        <div className="flex items-center gap-3">
+          <Heading
+            color="primary"
+            elem="h2"
+            label="Frontend"
+            className="flex items-center gap-3"
+          />
+          <WhileInView scale={0.8} x={-10}>
+            <FaLocationArrow className="size-5 rotate-45 text-blue-600" />
+          </WhileInView>
+        </div>
         <Marquee duration={30} gap={40} direction="left">
           {frontendSkills.map((skill) => (
             <li
@@ -46,18 +49,17 @@ export const Skills = () => {
             </li>
           ))}
         </Marquee>
-        <Heading elem="h3">
-          <RevealAnimation
+        <div className="flex items-center gap-3">
+          <WhileInView scale={0.8} x={-10}>
+            <FaLocationArrow className="size-5 rotate-[-135deg] text-purple-500" />
+          </WhileInView>
+          <Heading
             color="primary"
-            className="flex items-center gap-2"
-          >
-            <FaLocationArrow
-              aria-hidden="true"
-              className="size-5 text-purple-500 rotate-[-135deg]"
-            />
-            Backend
-          </RevealAnimation>
-        </Heading>
+            elem="h2"
+            label="Backend"
+            className="flex items-center gap-3"
+          />
+        </div>
       </div>
       <StickyCards />
     </section>
