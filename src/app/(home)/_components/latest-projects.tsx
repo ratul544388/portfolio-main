@@ -18,7 +18,7 @@ export const LatestProjects = () => {
       className="mt-20 flex max-w-[1000px] flex-col items-center"
     >
       <Heading label="Latest Projects" />
-      <ul className="mt-10 grid w-full gap-8 px-12 xs:grid-cols-2 xs:px-0 md:grid-cols-3">
+      <ul className="mt-10 grid w-full gap-8 grid-cols-2 md:grid-cols-3">
         {filteredProjects.map((project) => (
           <Project project={project} key={project.name} />
         ))}

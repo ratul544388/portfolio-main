@@ -11,7 +11,7 @@ export const Project = ({ project }: { project: ProjectType }) => {
 
   return (
     <article className="group relative cursor-pointer overflow-hidden rounded-md border bg-secondary/20 shadow hover:shadow-md transition-all">
-      <div className="relative h-[150px] w-full shadow-sm hover:shadow-md xs:h-[170px]">
+      <div className="relative h-[120px] w-full shadow-sm hover:shadow-md xs:h-[170px]">
         <Image
           src={image}
           alt={name}
@@ -33,7 +33,8 @@ export const Project = ({ project }: { project: ProjectType }) => {
             className={cn(buttonVariants({ variant: "outline" }), "w-full")}
           >
             <FaExternalLinkAlt className="!size-3" />
-            View Project
+            <span className="hidden xs:block">View Project</span>
+            <span className="xs:hidden">Live</span>
           </Link>
           <Link
             target="_blank"
