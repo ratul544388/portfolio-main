@@ -45,7 +45,7 @@ export const GradientBorderedButton = ({
       <span className="relative z-10 flex items-center gap-2">{children}</span>
       <span
         className={cn(
-          "absolute block size-[calc(100%_-_3px)] rounded-[3.5px] bg-background transition-colors group-hover:bg-secondary/90",
+          "absolute block size-[calc(100%_-_4px)] rounded-[4px] bg-background transition-colors group-hover:bg-secondary/90",
           rounded && "rounded-full",
         )}
       />
