@@ -21,7 +21,7 @@ const AboutPage = () => {
         technology and learning.
       </Description>
       <div className="mt-12 grid w-full gap-10 lg:grid-cols-2">
-        <div className="relative h-[450px] w-full overflow-hidden rounded-lg">
+        <div className="relative bg-secondary/40 border h-[450px] w-full overflow-hidden rounded-lg">
           <Image
             src="/user-coding.jpg"
             alt="User coding"
