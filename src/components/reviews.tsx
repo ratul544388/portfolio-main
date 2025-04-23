@@ -42,7 +42,7 @@ export const Reviews = () => {
                     alt={name}
                     width={48}
                     height={48}
-                    className="mt-6 h-fit max-h-12 rounded-full border-2 border-white object-cover"
+                    className="mt-6 bg-secondary/40 h-fit max-h-12 rounded-full border-2 border-white object-cover"
                   />
                   <h5 className="mt-2 font-chakra_petch text-sm font-medium">
                     {name}

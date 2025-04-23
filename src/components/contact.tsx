@@ -11,7 +11,6 @@ export const Contact = () => {
   return (
     <section
       className="relative overflow-hidden mt-16 bg-background-2 pb-36 pt-28 text-center"
-      style={{ clipPath: "polygon(11% 4%, 100% 0, 100% 100%, 0 93%, 0 15%)" }}
     >
       <Container
         color="primary"
