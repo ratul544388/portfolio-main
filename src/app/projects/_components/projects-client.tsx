@@ -12,16 +12,9 @@ export const ProjectsClient = () => {
   const [activeCategory, setActiveCategory] =
     useState<ProjectCategoryType>("all projects");
   return (
-    <Container
-      id="projects"
-      className="scroll-margin-top mt-10 flex flex-col items-center"
-      elem="section"
-    >
-      <Heading label="Projects" color="primary"/>
-      <Description
-        delay={0.3}
-        className="mt-2 text-center"
-      >
+    <Container className="mt-10 flex flex-col items-center">
+      <Heading label="Projects" color="primary" />
+      <Description delay={0.3} className="mt-2 text-center">
         Explore my web projects built with modern technologies like React,
         Next.js, Node.js, and more
       </Description>

@@ -11,7 +11,7 @@ export const Project = ({ project }: { project: ProjectType }) => {
   const { name, deployedLink, githubLink, image, rating } = project;
 
   return (
-    <WhileInView elem="li" y={100} scale={0.8}>
+    <WhileInView elem="li" y={100}>
       <article className="group relative cursor-pointer overflow-hidden rounded-md border bg-secondary/20 shadow transition-all hover:shadow-md">
         <div className="relative h-[120px] w-full shadow-sm hover:shadow-md xs:h-[170px]">
           <Image

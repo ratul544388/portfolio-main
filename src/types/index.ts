@@ -14,10 +14,21 @@ export type ProjectType = {
   rating: number;
 };
 
-export type ColorType =
-  | "default"
-  | "primary"
+export type ColorType = "default" | "primary";
 
 export type ThemeType = "system" | "light" | "dark";
 
 export type IconType = ReactIconType | LucideIcon;
+
+export type Element =
+  | "main"
+  | "div"
+  | "section"
+  | "span"
+  | "p"
+  | "button"
+  | "footer"
+  | "header"
+  | "nav"
+  | "ul"
+  | "li";

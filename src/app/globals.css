@@ -72,9 +72,6 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-  .scroll-margin-top {
-    @apply scroll-mt-20;
-  }
   .bg-gradient {
     @apply bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-600 ;
   }

@@ -8,7 +8,7 @@ import { ContactInformation } from "./contact-information";
 
 export const ContactClient = () => {
   return (
-    <Container elem="main" className="flex flex-col items-center py-12">
+    <Container className="flex flex-col items-center py-12">
       <Heading label="Contact me" color="primary" />
       <Description delay={0.2} className="mt-3 text-center">
         Have a question or want to work together? Feel free to reach out!

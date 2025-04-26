@@ -1,16 +1,16 @@
 "use client";
 import { navLinks, socialLinks } from "@/constants";
-import { useRouterHash } from "@/hooks/use-router-hash";
 import { cn } from "@/lib/utils";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ThemeToggler } from "./theme-toggler";
 import { WhileInView } from "./while-in-view";
 
 export const MobileMenu = () => {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const hash = useRouterHash();
 
   const variants: Variants = {
     open: {
@@ -46,7 +46,7 @@ export const MobileMenu = () => {
         <nav className="">
           <ul key={String(open)} className="space-y-6">
             {navLinks.map(({ label, href, icon: Icon }, i) => {
-              const isActive = href === hash;
+              const isActive = href === pathname;
               return (
                 <WhileInView
                   delay={0.3 + 0.1 * i}
@@ -59,10 +59,12 @@ export const MobileMenu = () => {
                     href={href}
                     className={cn(
                       "flex items-center gap-4 font-rowdies text-3xl text-muted-foreground transition-colors",
-                      isActive && "text-primary",
+                      isActive && "bg-gradient bg-clip-text text-transparent",
                     )}
                   >
-                    <Icon className="size-5" />
+                    <Icon
+                      className={cn("size-5", isActive && "text-purple-500")}
+                    />
                     {label}
                   </Link>
                 </WhileInView>

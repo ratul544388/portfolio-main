@@ -1,20 +1,18 @@
 "use client";
 
 import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 import { Container } from "./container";
 import { Heading } from "./heading";
 import { HoverButton } from "./hover-button";
-import Image from "next/image";
 import { WhileInView } from "./while-in-view";
 
 export const Contact = () => {
   return (
-    <section
-      className="relative overflow-hidden mt-16 bg-background-2 pb-36 pt-28 text-center"
-    >
+    <section className="relative mt-16 overflow-hidden bg-background-2 pb-36 pt-28 text-center">
       <Container
         color="primary"
-        className="relative flex flex-col items-center"
+        className="relative z-20 flex flex-col items-center"
       >
         <Heading label="Start Building Your Website" />
         <div className="relative">
@@ -39,7 +37,7 @@ export const Contact = () => {
           </WhileInView>
         </div>
       </Container>
-      <div className="absolute left-0 top-1/2 -z-10 size-60 -translate-x-[40%] -translate-y-1/2 opacity-20 md:opacity-100">
+      <div className="absolute left-0 top-1/2 z-10 size-60 -translate-x-[40%] -translate-y-1/2 opacity-20 md:opacity-100">
         <Image
           src="/images/blob-1.svg"
           fill
@@ -48,7 +46,7 @@ export const Contact = () => {
         />
         <Image src="/images/blob-outline-1.svg" fill alt="Blog" className="" />
       </div>
-      <div className="absolute right-0 top-1/2 -z-10 size-60 translate-x-[40%] -translate-y-1/2 opacity-20 md:opacity-100">
+      <div className="absolute right-0 top-1/2 z-10 size-60 -translate-y-1/2 translate-x-[40%] opacity-20 md:opacity-100">
         <Image
           src="/images/blob-2.svg"
           fill

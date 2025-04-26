@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className={`${fonts} flex flex-col pt-20 antialiased`}>
         <SmoothScrollProvider>
           <ThemeProvider
@@ -32,7 +32,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Header />
-            {children}
+            <main className="min-h-screen">{children}</main>
             <Footer />
             <Toaster />
           </ThemeProvider>

@@ -33,7 +33,6 @@ export const Heading = ({
     typeof label === "string" ? label : label.map((l) => l.text).join(" ");
   return (
     <Elem
-      aria-label={ariaLabel}
       className={cn(
         "font-rowdies text-4xl leading-[50px]",
         Elem === "h2" && "text-3xl leading-[42px]",
@@ -42,6 +41,7 @@ export const Heading = ({
       )}
       {...props}
     >
+      <span className="sr-only">{ariaLabel}</span>
       {typeof label === "string" ? (
         animation ? (
           <RevealAnimation
@@ -53,7 +53,7 @@ export const Heading = ({
             {label}
           </RevealAnimation>
         ) : (
-          label
+          <span aria-hidden="true">{label}</span>
         )
       ) : (
         label.map((l, i) => (

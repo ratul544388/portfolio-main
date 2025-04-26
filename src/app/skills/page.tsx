@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { SkillsClient } from "./skills-client";
+import { SkillsClient } from "./_components/skills-client";
 
 export const generateMetadata = (): Metadata => {
   return {

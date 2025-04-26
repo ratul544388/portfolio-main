@@ -1,5 +1,7 @@
 import {
+  FaAward,
   FaBriefcase,
+  FaCertificate,
   FaFacebook,
   FaGithub,
   FaHome,
@@ -8,6 +10,7 @@ import {
   FaPhoneAlt,
   FaRocket,
   FaTwitter,
+  FaUsers,
 } from "react-icons/fa";
 
 export const myTwitterLink = "https://twitter.com/Ratul2582";
@@ -47,6 +50,7 @@ import stackCardImageFullStack from "@/../public/stack-cards-images/full-stack.j
 import stackCardImageUILibraries from "@/../public/stack-cards-images/ui-ilbraries.jpg";
 
 import { ProjectType } from "@/types";
+import { Briefcase } from "lucide-react";
 import { TbBrandFiverr } from "react-icons/tb";
 
 export const navLinks = [
@@ -377,3 +381,61 @@ export const stackCards = [
     image: stackCardImageFullStack,
   },
 ];
+
+export const experienceCardData = [
+  {
+    label: "Years of Experience",
+    icon: FaAward,
+    countValue: "3+",
+  },
+  {
+    label: "Completed Projects",
+    icon: Briefcase,
+    countValue: "33+",
+  },
+  {
+    label: "Satisfied Clients",
+    icon: FaUsers,
+    countValue: "11+",
+  },
+  {
+    label: "Certificates Earned",
+    icon: FaCertificate,
+    countValue: "3+",
+  },
+] as const;
+
+
+export const timelineData = [
+  {
+    title: "Completed Higher Secondary Certificate (HSC)",
+    date: "July 2021",
+    description: "Graduated from Sheikh Burhanuddin Post Graduate College, majoring in Science. Built a strong academic foundation in mathematics, physics, and computer science, developing problem-solving abilities and analytical skills that later fueled my passion for full-stack web development and modern software technologies.",
+  },
+  {
+    title: "Started BSc in Computer Science & Engineering",
+    date: "Dec 2022",
+    description: "Began pursuing a Bachelor’s degree in Computer Science to deepen my knowledge of programming, data structures, algorithms, and software engineering principles. Focused on enhancing both theoretical understanding and practical experience in web development, database systems, and cloud-based solutions.",
+  },
+  {
+    title: "Began Full-Stack Web Development Journey",
+    date: "Feb 2022",
+    description: "Started building full-stack web applications, mastering technologies like React, Next.js, TypeScript, Node.js, and MongoDB. Focused on creating scalable, responsive, and modern web apps while learning about API development, backend systems, authentication, and user-centered design principles.",
+  },
+  {
+    title: "Developed Gym Management Website",
+    date: "Mar 2024",
+    description: "Designed and built a complete gym management platform for Akash Fitness Studio. Implemented features for member registration, subscription management, revenue tracking, and personalized fitness plans using modern web technologies to improve business operations and user experience.",
+  },
+  {
+    title: "Built Custom Food Ordering Website",
+    date: "Sep 2024",
+    description: "Created a custom food ordering website for a local business, integrating real-time chat support, secure online payment systems, and an intuitive ordering process. Focused on delivering an engaging, mobile-responsive user experience and streamlined order management for the business.",
+  },
+  {
+    title: "Designed Business Portfolio Website",
+    date: "Jan 2025",
+    description: "Developed a modern, fully responsive portfolio website for a business to enhance its digital identity. Focused on clean UI/UX design, fast performance, SEO optimization, and scalability, helping the brand create a strong online presence and attract potential clients.",
+  },
+] as const;
+

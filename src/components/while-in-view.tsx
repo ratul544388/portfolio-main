@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { Element } from "@/types";
 import { motion } from "framer-motion";
 import { ReactNode, useMemo } from "react";
 
@@ -12,7 +13,7 @@ interface WhileInViewProps {
   children?: ReactNode;
   className?: string;
   once?: boolean;
-  elem?: "div" | "ul" | "li" | "span" | "p" | "button" | "section";
+  elem?: Element;
   onClick?: () => void;
 }
 

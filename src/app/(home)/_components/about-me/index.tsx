@@ -37,8 +37,7 @@ export const AboutMe = () => {
         <HoverButton
           href="/about"
           variant="secondary"
-          cut="top"
-          className="mx-auto mt-10"
+          className="mx-auto mt-10 border bg-white hover:bg-white"
         >
           <GiOpenBook className="size-4" />
           View Full Details

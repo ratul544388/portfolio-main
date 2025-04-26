@@ -47,7 +47,7 @@ export const RevealAnimation = ({
   return (
     <MotionElement
       className={cn(
-        "relative inline-block w-fit text-foreground",
+        "relative inline-block size-fit text-foreground",
         color === "primary" && "bg-gradient bg-clip-text text-transparent",
         className,
       )}
