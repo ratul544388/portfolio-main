@@ -1,7 +1,7 @@
 import { Container } from "@/components/container";
 import { Description } from "@/components/description";
 import { Heading } from "@/components/heading";
-import { Timeline } from "@/components/time-line";
+import { Timeline } from "@/app/about/_components/time-line";
 import { Metadata } from "next";
 import Image from "next/image";
 import { SkillList } from "./_components/skill-list";
