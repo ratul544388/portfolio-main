@@ -5,6 +5,7 @@ import { Timeline } from "@/app/about/_components/time-line";
 import { Metadata } from "next";
 import Image from "next/image";
 import { SkillList } from "./_components/skill-list";
+import UserImage from "@/../public/user-coding.jpg";
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -24,8 +25,9 @@ const AboutPage = () => {
         <div className="mt-12 grid w-full gap-10 lg:grid-cols-2">
           <div className="relative h-[450px] w-full overflow-hidden rounded-lg border bg-secondary/40">
             <Image
-              src="/user-coding.jpg"
+              src={UserImage}
               alt="User coding"
+              placeholder="blur"
               fill
               className="object-cover"
             />
