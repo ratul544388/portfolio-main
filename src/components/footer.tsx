@@ -78,7 +78,7 @@ export const Footer = () => {
           </div>
         </section>
       </Container>
-      <span className="absolute h-20 w-[75%] opacity-30 left-1/2 -translate-x-1/2 bottom-10 blur-3xl rounded-full bg-primary"/>
+      <span className="absolute pointer-events-none h-20 w-[75%] opacity-30 left-1/2 -translate-x-1/2 bottom-10 blur-3xl rounded-full bg-primary"/>
     </footer>
   );
 };

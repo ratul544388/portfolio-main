@@ -1,10 +1,10 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { VariantProps } from "class-variance-authority";
 import Link from "next/link";
 import React from "react";
 import { buttonVariants } from "./ui/button";
-import { cn } from "@/lib/utils";
 
 interface GradientBorderedButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
@@ -22,7 +22,6 @@ export const GradientBorderedButton = ({
   target,
   size,
   className,
-  rounded,
 }: GradientBorderedButtonProps) => {
   const Elem = href ? Link : "button";
   return (
@@ -31,24 +30,18 @@ export const GradientBorderedButton = ({
         buttonVariants({
           variant: "outline",
           size,
-          className: cn(
-            "group relative bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-600 hover:from-blue-600 hover:to-purple-500",
-          ),
         }),
-        rounded && "rounded-full",
+        "group relative overflow-hidden rounded-md border-none bg-transparent p-[2px]",
         className,
       )}
       href={href}
       download={download}
       target={target}
     >
-      <span className="relative z-10 flex items-center gap-2">{children}</span>
-      <span
-        className={cn(
-          "absolute block size-[calc(100%_-_4px)] rounded-[4px] bg-background transition-colors group-hover:bg-secondary/90",
-          rounded && "rounded-full",
-        )}
-      />
+      <span className="absolute inset-0 [background-image:conic-gradient(#8b5cf6,#7c3aed,#3b82f6,#8b5cf6)]" />
+      <span className="relative z-10 flex h-full items-center gap-2 rounded-[4px] bg-background px-5 group-hover:bg-background/70">
+        {children}
+      </span>
     </Elem>
   );
 };

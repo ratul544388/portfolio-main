@@ -3,8 +3,8 @@ import { WhileInView } from "@/components/while-in-view";
 import { motion } from "framer-motion";
 export const Developer = () => {
   return (
-    <div className="relative flex w-full items-center justify-center overflow-hidden p-1">
-      <div className="relative z-10">
+    <div className="relative rounded-lg flex w-full items-center justify-center overflow-hidden p-1">
+      <div className="relative z-10 rounded-[6px] overflow-hidden">
         <Code />
       </div>
       <motion.span

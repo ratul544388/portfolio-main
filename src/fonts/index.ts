@@ -5,6 +5,7 @@ import {
   Rowdies,
   Teko,
   Gupter,
+  Aladin,
 } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], variable: "--inter" });
@@ -39,4 +40,10 @@ const gupter = Gupter({
   variable: "--gupter",
 });
 
-export const fonts = `${inter.variable} ${kanit.variable} ${chakraPetch.variable} ${rowdies.variable} ${teko.variable} ${gupter.variable}`;
+const aladin = Aladin({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--aladin",
+});
+
+export const fonts = `${inter.variable} ${kanit.variable} ${chakraPetch.variable} ${rowdies.variable} ${teko.variable} ${gupter.variable} ${aladin.variable}`;

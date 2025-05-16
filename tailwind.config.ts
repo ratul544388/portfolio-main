@@ -19,6 +19,7 @@ export default {
         chakra_petch: ["var(--chakra_petch)"],
         teko: ["var(--teko)"],
         gupter: ["var(--gupter)"],
+        aladin: ["var(--aladin)"],
       },
       colors: {
         background: {
