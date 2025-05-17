@@ -40,7 +40,7 @@ export const Intro = () => {
             y={50}
             className="mt-7 flex justify-center gap-4 lg:justify-start"
           >
-            <HoverButton href="contact" size="lg" cut="top" className="">
+            <HoverButton variant="secondary" href="/contact" size="lg" className="">
               <FaLocationArrow className="rotate !size-3" />
               Contact me
             </HoverButton>

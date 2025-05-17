@@ -1,26 +1,26 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { motion, useAnimate } from "framer-motion";
-import Link from "next/link";
 import { useRef } from "react";
-import { ButtonProps, buttonVariants } from "./ui/button";
+import { Button, ButtonProps } from "./ui/button";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
-interface HoverButtonProps extends ButtonProps {
+interface TestButtonProps extends ButtonProps {
   href?: string;
   target?: "_self" | "_blank";
   innerClassName?: string;
 }
 
-export const HoverButton = ({
-  variant = "default",
+export const TestButton = ({
+  variant,
   size,
   href,
   target = "_self",
   children,
   className,
   innerClassName,
-}: HoverButtonProps) => {
+}: TestButtonProps) => {
   const [scope, animate] = useAnimate();
   const ANIMATION_DURATION = 0.4;
 
@@ -69,9 +69,7 @@ export const HoverButton = ({
     }
   };
 
-  const ButtonElem = href ? Link : "button";
-
-  console.log(variant)
+  const ButtonElem = href ? Link : Button;
 
   return (
     <ButtonElem
@@ -80,17 +78,13 @@ export const HoverButton = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       ref={scope}
-      className={cn(
-        buttonVariants({ variant, size }),
-        "group relative overflow-hidden",
-        variant === "secondary" && "border-none",
-        className,
-      )}
+      className={cn("group relative overflow-hidden", className)}
+      variant={variant}
+      size={size}
     >
       <span
         className={cn(
-          "duration-400 relative z-10 flex items-center gap-2",
-          variant === "default" && 'dark:mix-blend-difference',
+          "relative z-10 flex items-center gap-2 mix-blend-difference",
           innerClassName,
         )}
       >
@@ -99,10 +93,7 @@ export const HoverButton = ({
       <motion.span
         id="span"
         style={{ x: "-100%" }}
-        className={cn(
-          "absolute h-full w-[calc(100%_+_30px)] rounded-full bg-black dark:bg-white",
-          variant === "secondary" && "bg-primary dark:bg-primary",
-        )}
+        className="absolute size-full w-[calc(100%_+_20px)] rounded-full bg-white"
       />
     </ButtonElem>
   );

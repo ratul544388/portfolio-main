@@ -10,7 +10,7 @@ export const SocialLinks = () => {
             <Link
               href={href}
               target="_blank"
-              className="block rounded-full p-2 transition-colors text-muted-foreground hover:bg-primary/10"
+              className="block rounded-full p-2 transition-colors text-muted-foreground hover:text-foreground"
             >
               <Icon className="size-4" />
             </Link>

@@ -100,6 +100,9 @@ export default {
         autoRun: "autoRun 15s linear infinite",
         borderAnimation: "borderAnimation 6s linear infinite",
       },
+      transitionDuration: {
+        400: "400ms",
+      },
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
