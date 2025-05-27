@@ -15,6 +15,7 @@ interface WhileInViewProps {
   once?: boolean;
   elem?: Element;
   onClick?: () => void;
+  amount?: number;
 }
 
 export const WhileInView = ({
@@ -22,13 +23,14 @@ export const WhileInView = ({
   y = 0,
   scale = 1,
   opacity = 0,
-  duration = 0.5,
+  duration = 1,
   delay = 0,
   children,
   className,
   once = true,
   elem = "div",
   onClick,
+  amount = 0,
 }: WhileInViewProps) => {
   const MotionElement = useMemo(() => motion.create(elem), [elem]);
   return (
@@ -39,7 +41,7 @@ export const WhileInView = ({
         scale: [scale, 1],
         opacity: [opacity, 1],
       }}
-      viewport={{ once, amount: 0.3 }}
+      viewport={{ once, amount }}
       transition={{ duration, delay }}
       className={cn("opacity-0", className)}
       onClick={onClick}

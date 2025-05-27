@@ -82,7 +82,7 @@ export const HoverButton = ({
       ref={scope}
       className={cn(
         buttonVariants({ variant, size }),
-        "group relative overflow-hidden",
+        "group relative overflow-hidden [box-shadow:hsl(var(--primary)/0.5)_4px_4px]",
         variant === "secondary" && "border-none",
         className,
       )}

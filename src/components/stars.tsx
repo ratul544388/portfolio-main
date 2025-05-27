@@ -5,9 +5,10 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 interface StarsProps {
   rating: number;
+  iconSize?: number;
 }
 
-export const Stars = ({ rating }: StarsProps) => {
+export const Stars = ({ rating, iconSize = 16 }: StarsProps) => {
   return (
     <div className="mb-4 mt-2 flex gap-2">
       {Array.from({ length: 5 }).map((_, i) => {
@@ -23,8 +24,8 @@ export const Stars = ({ rating }: StarsProps) => {
         return (
           <Icon
             key={i}
+            size={iconSize}
             className={cn(
-              "size-4",
               Icon !== FaRegStar ? "text-[#FFD700]" : "text-foreground"
             )}
           />

@@ -6,6 +6,7 @@ import { SmoothScrollProvider } from "@/providers/smooth-scroll-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
 import "./globals.css";
+import MouseTrail from "@/components/mouse-trial";
 
 export const metadata: Metadata = {
   title: {
@@ -34,6 +35,7 @@ export default function RootLayout({
             <Header />
             <main className="min-h-screen">{children}</main>
             <Footer />
+            <MouseTrail/>
             <Toaster />
           </ThemeProvider>
         </SmoothScrollProvider>

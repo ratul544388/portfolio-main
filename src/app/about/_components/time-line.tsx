@@ -3,9 +3,8 @@ import { timelineData } from "@/constants";
 import { cn } from "@/lib/utils";
 import { Description } from "../../../components/description";
 import { Heading } from "../../../components/heading";
-import { WhileInView } from "../../../components/while-in-view";
 import { RevealAnimation } from "../../../components/reveal-animation";
-import { useWindowSize } from "usehooks-ts";
+import { WhileInView } from "../../../components/while-in-view";
 
 export const Timeline = () => {
   return (
@@ -27,8 +26,6 @@ const TimelineItem = ({
   index,
 }: (typeof timelineData)[number] & { index: number }) => {
   const isEven = index % 2 === 0;
-  const { width } = useWindowSize();
-  const sm = width >= 640;
   return (
     <li
       className={cn(
@@ -37,7 +34,8 @@ const TimelineItem = ({
       )}
     >
       <WhileInView
-        x={sm ? (isEven ? 100 : -100) : 100}
+        y={30}
+        scale={0.95}
         className="relative w-full rounded-lg border bg-gradient-to-r from-secondary/50 to-secondary/20 p-3"
       >
         <h3 className="font-rowdies text-lg">{title}</h3>
