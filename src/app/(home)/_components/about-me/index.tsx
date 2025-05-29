@@ -1,12 +1,12 @@
 "use client";
 import { GradientBorderedButton } from "@/components/gradient-bordered-button";
-import { HoverButton } from "@/components/hover-button";
+import { PrimaryButton } from "@/components/primary-button";
 import { FaArrowDown } from "react-icons/fa";
+import { GiOpenBook } from "react-icons/gi";
 import { Container } from "../../../../components/container";
 import { _3dImage } from "./_3d-image";
 import { DecorationImages } from "./decoration-images";
 import { TextContainer } from "./text-container";
-import { GiOpenBook } from "react-icons/gi";
 
 export const AboutMe = () => {
   return (
@@ -34,14 +34,14 @@ export const AboutMe = () => {
             className="lg:-translate-y-[250px] lg:translate-x-[370px]"
           />
         </div>
-        <HoverButton
+        <PrimaryButton
           href="/about"
           variant="secondary"
           className="mx-auto mt-10 border"
         >
           <GiOpenBook className="size-4" />
           View Full Details
-        </HoverButton>
+        </PrimaryButton>
       </Container>
     </section>
   );

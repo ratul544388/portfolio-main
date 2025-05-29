@@ -2,7 +2,7 @@
 
 import { Container } from "@/components/container";
 import { Heading } from "@/components/heading";
-import { HoverButton } from "@/components/hover-button";
+import { PrimaryButton } from "@/components/primary-button";
 import { Project } from "@/components/project";
 import { projects } from "@/constants";
 import { FaRocket } from "react-icons/fa";
@@ -23,7 +23,7 @@ export const LatestProjects = () => {
           <Project project={project} key={project.name} />
         ))}
       </ul>
-      <HoverButton
+      <PrimaryButton
         href="/projects"
         cut="top"
         variant="secondary"
@@ -31,7 +31,7 @@ export const LatestProjects = () => {
       >
         <FaRocket className="size-4" />
         View All Projects
-      </HoverButton>
+      </PrimaryButton>
     </Container>
   );
 };

@@ -34,8 +34,8 @@ export const Heading = ({
   return (
     <Elem
       className={cn(
-        "font-rowdies text-4xl leading-[50px]",
-        Elem === "h2" && "text-3xl leading-[42px]",
+        "font-rowdies text-3xl leading-[50px] sm:text-4xl",
+        Elem === "h2" && " text-2xl sm:text-3xl leading-[42px]",
         Elem === "h3" && "text-2xl leading-[36px]",
         className,
       )}

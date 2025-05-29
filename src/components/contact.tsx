@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { Container } from "./container";
 import { Heading } from "./heading";
-import { HoverButton } from "./hover-button";
+import { PrimaryButton } from "./primary-button";
 import { WhileInView } from "./while-in-view";
 
 export const Contact = () => {
@@ -16,9 +16,9 @@ export const Contact = () => {
       >
         <Heading label="Start Building Your Website" />
         <div className="relative">
-          <HoverButton href="/contact" className="mt-12 font-rowdies" size="lg">
+          <PrimaryButton href="/contact" className="mt-12 font-rowdies" size="lg">
             Contact Now <ChevronRight className="size-4" />{" "}
-          </HoverButton>
+          </PrimaryButton>
           <WhileInView>
             <Image
               src="/images/contact-button-decorator.png"
