@@ -69,6 +69,8 @@ const MouseTrail: React.FC = () => {
       circlesRef.current.forEach((circle, index) => {
         if (!circle) return;
 
+        console.log("Running")
+
         circle.style.left = `${x - 12}px`;
         circle.style.top = `${y - 12}px`;
         circle.style.scale = `${
