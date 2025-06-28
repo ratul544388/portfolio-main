@@ -11,7 +11,9 @@ export type ProjectType = {
   category?: ProjectCategoryType;
   githubLink: string;
   deployedLink: string;
-  rating: number;
+  technologies: Technologies[];
+  description: string;
+  features: string[];
 };
 
 export type ColorType = "default" | "primary";
@@ -32,3 +34,25 @@ export type Element =
   | "nav"
   | "ul"
   | "li";
+
+export type Technologies =
+  | "HTML"
+  | "CSS"
+  | "Tailwind CSS"
+  | "JavaScript"
+  | "TypeScript"
+  | "React"
+  | "ShadCN UI"
+  | "Framer Motion"
+  | "GSAP"
+  | "Tanstack Query"
+  | "Redux"
+  | "Node.js"
+  | "Next.js"
+  | "MongoDB"
+  | "SQL"
+  | "PostGreSQL"
+  | "Prisma"
+  | "Drizzle"
+  | "Socket.io"
+  | "Stripe";

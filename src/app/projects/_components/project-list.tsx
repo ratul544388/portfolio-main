@@ -7,19 +7,19 @@ export const ProjectList = ({
 }: {
   activeCategory: ProjectCategoryType;
 }) => {
-  const sortProjects = projects
-    .sort((a, b) => b.rating - a.rating)
-    .filter((project) => project.category === activeCategory);
+  const sortProjects = projects.filter(
+    (project) => project.category === activeCategory,
+  );
 
-  const filteredProjects = !!sortProjects.length ? sortProjects : projects;
+  const formattedProjects = !!sortProjects.length ? sortProjects : projects;
 
   return (
     <div className="mt-12 flex w-full flex-col items-center">
       <ul
         key={activeCategory}
-        className="relative z-20 mx-auto grid w-full max-w-[1100px] grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4"
+        className="relative flex flex-col gap-5 max-w-[1000px]"
       >
-        {filteredProjects.map((p) => (
+        {formattedProjects.map((p) => (
           <Project key={p.name} project={p} />
         ))}
       </ul>

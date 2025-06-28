@@ -126,7 +126,26 @@ export const projects: ProjectType[] = [
     category: "ecommerce",
     githubLink: "https://github.com/ratul544388/ecommerce",
     deployedLink: "https://ecommerce-coral-delta.vercel.app",
-    rating: 4.5,
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "MongoDB",
+      "Prisma",
+      "Stripe",
+      "Next.js",
+    ],
+    description:
+      "Glamify is a full-featured e-commerce platform tailored for selling clothing items. Users can browse a variety of apparel, choose sizes and colors, and complete purchases through a streamlined shopping experience with Stripe payment integration.",
+    features: [
+      "User authentication with secure login and registration",
+      "Browse clothing by category, size, color, and more",
+      "Detailed product pages with multiple variant options",
+      "Shopping cart functionality with quantity adjustments",
+      "Stripe-powered payment gateway for secure checkout",
+      "User dashboard to manage orders and view cart history",
+      "Admin dashboard for managing products, sales, and revenue insights",
+    ],
   },
   {
     name: "Digital Marketplace",
@@ -134,7 +153,27 @@ export const projects: ProjectType[] = [
     category: "ecommerce",
     githubLink: "https://github.com/ratul544388/digital-marketplace",
     deployedLink: "https://digital-marketplace-rouge.vercel.app",
-    rating: 4,
+    technologies: [
+      "React",
+      "Next.js",
+      "MongoDB",
+      "TypeScript",
+      "ShadCN UI",
+      "Tailwind CSS",
+      "Stripe",
+      "Prisma",
+    ],
+    description:
+      "The Digital Marketplace is a multi-vendor platform for buying and selling digital products like icons, illustrations, videos, and other creative assets. Users can register as sellers or buyers, upload digital content, and manage sales through intuitive dashboards.",
+    features: [
+      "Role-based access for buyers and sellers",
+      "Sellers can upload, manage, and monetize digital assets",
+      "Buyers can purchase and download digital products",
+      "Integrated Stripe payment system for instant checkout",
+      "Seller dashboard to track earnings, products, and transactions",
+      "Buyer dashboard to view purchase history and access downloads",
+      "Admin panel to oversee listings, users, and platform activity",
+    ],
   },
   {
     name: "Waffles",
@@ -142,7 +181,16 @@ export const projects: ProjectType[] = [
     category: "ecommerce",
     githubLink: "https://github.com/ratul544388/waffle",
     deployedLink: "https://waffle-two.vercel.app/",
-    rating: 5,
+    technologies: ["HTML", "Tailwind CSS", "TypeScript", "Next.js"],
+    description:
+      "Waffles is a food ordering website tailored for a local waffles and drinks shop. Customers can browse the available menu items and place their orders through a real-time chat-based interface that notifies the shop owner for fulfillment.",
+    features: [
+      "Clean and responsive frontend built with HTML, Tailwind CSS, and Next.js",
+      "Users can select waffles or drinks from the menu",
+      "Integrated chat feature to place orders by messaging the shop owner",
+      "Real-time order notifications for the shop admin",
+      "Manual order confirmation and delivery handling by the store owner",
+    ],
   },
   {
     name: "Gym Admin Management",
@@ -150,7 +198,17 @@ export const projects: ProjectType[] = [
     category: "management",
     githubLink: "https://github.com/ratul544388/gym-admin-management",
     deployedLink: "https://gym-admin-management.vercel.app/",
-    rating: 5,
+    technologies: ["TypeScript", "React", "MongoDB", "Prisma", "Tailwind CSS"],
+    description:
+      "Gym Admin Management is a full-featured admin dashboard designed for managing gym memberships, plans, and revenue. Admins can manage members, assign plans, and track overall business performance, making it ideal for gym operators.",
+    features: [
+      "Full CRUD operations for managing gym members",
+      "Add, update, or delete membership plans",
+      "Assign specific plans to members during registration",
+      "Track monthly revenue and expenses with visual stats",
+      "Renew membership and monitor member activity",
+      "User-friendly UI for efficient management",
+    ],
   },
   {
     name: "Twitter Clone",
@@ -158,7 +216,26 @@ export const projects: ProjectType[] = [
     category: "social media",
     githubLink: "https://github.com/ratul544388/twitter-clone",
     deployedLink: "https://twitter-clone-next-15.vercel.app/",
-    rating: 5,
+    technologies: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "SQL",
+      "Prisma",
+      "Tanstack Query",
+      "Tailwind CSS",
+    ],
+    description:
+      "Twitter Clone is a feature-rich social media application inspired by the core functionalities of real Twitter. It allows users to post, interact, and engage with tweets just like the original platform.",
+    features: [
+      "User registration and authentication",
+      "Create, update, and delete tweets",
+      "Like and bookmark other users’ tweets",
+      "View all tweets in a public timeline",
+      "User profiles with tweet history",
+      "Fully responsive and interactive UI",
+      "Built with Tanstack Query for efficient data handling",
+    ],
   },
   {
     name: "Mern-blog-app",
@@ -166,7 +243,17 @@ export const projects: ProjectType[] = [
     category: "social media",
     githubLink: "https://github.com/ratul544388/mern-blog-app",
     deployedLink: "https://mern-blog-app-kij0.onrender.com/",
-    rating: 3.5,
+    technologies: ["HTML", "JavaScript", "Tailwind CSS", "MongoDB"],
+    description:
+      "MERN Blog App is a full-stack blogging platform where users can create and publish posts, view others' content, and engage in discussions through threaded comments. It provides a social blogging experience with powerful search and interaction capabilities.",
+    features: [
+      "User authentication and post creation",
+      "View all published blog posts in reverse chronological order",
+      "Commenting system with support for nested replies",
+      "Search functionality to filter and locate posts",
+      "Post view counters and metadata display",
+      "Responsive and mobile-friendly design",
+    ],
   },
   {
     name: "Food Ordering App",
@@ -174,7 +261,24 @@ export const projects: ProjectType[] = [
     category: "ecommerce",
     githubLink: "https://github.com/ratul544388/quick-bite",
     deployedLink: "https://quick-bite-eosin.vercel.app",
-    rating: 3.5,
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "Next.js",
+      "Stripe",
+    ],
+    description:
+      "Food Ordering App is a modern web application that allows users to browse menus and order food online. It offers an intuitive user experience with real-time cart updates and a secure checkout process using Stripe.",
+    features: [
+      "Real-time food menu display with images and pricing",
+      "Add-to-cart and remove-from-cart functionality",
+      "User login and secure order management",
+      "Stripe integration for seamless payment processing",
+      "Order tracking and confirmation pages",
+      "Responsive layout optimized for food delivery experiences",
+    ],
   },
   {
     name: "Blog App",
@@ -182,7 +286,16 @@ export const projects: ProjectType[] = [
     category: "social media",
     githubLink: "https://github.com/ratul544388/blog-app",
     deployedLink: "https://blog-app-chi-drab.vercel.app",
-    rating: 3,
+    technologies: ["TypeScript", "React", "MongoDB", "Node.js", "Tailwind CSS"],
+    description:
+      "This Blog App is a feature-rich blogging platform built with TypeScript and the MERN stack. It allows users to publish blog posts, explore content written by others, and interact via comments—delivering a clean and professional blog experience.",
+    features: [
+      "Type-safe blog creation and management using TypeScript",
+      "Create, read, update, and delete blog posts",
+      "Engage with content through comments",
+      "Responsive and accessible UI for all device types",
+      "Efficient backend with MongoDB and Node.js for scalable content delivery",
+    ],
   },
   {
     name: "Doctor Booking App",
@@ -190,7 +303,16 @@ export const projects: ProjectType[] = [
     category: "booking",
     githubLink: "https://github.com/ratul544388/Doctor-Booking-App",
     deployedLink: "https://doctor-booking-app.vercel.app",
-    rating: 3.5,
+    technologies: ["HTML", "Tailwind CSS", "TypeScript", "MongoDB", "Prisma"],
+    description:
+      "Doctor Booking App is a medical appointment platform that allows users to browse available doctors and seamlessly book appointments based on their preferred schedule and specialization.",
+    features: [
+      "Doctor listing with details such as specialization and availability",
+      "Appointment booking form with date and time selection",
+      "User-friendly booking process for patients",
+      "Responsive and intuitive UI",
+      "Backend integration using MongoDB and Prisma",
+    ],
   },
   {
     name: "Portfolio 1",
@@ -198,7 +320,22 @@ export const projects: ProjectType[] = [
     category: "portfolio",
     githubLink: "https://github.com/ratul544388/portfolio-1",
     deployedLink: "https://ratulcodes-1.vercel.app",
-    rating: 3.5,
+    technologies: [
+      "HTML",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React",
+      "TypeScript",
+    ],
+    description:
+      "Portfolio 1 is a personal web portfolio designed to showcase my skills, projects, and development experience in a clean and animated layout.",
+    features: [
+      "Interactive animations using Framer Motion",
+      "Responsive design across all devices",
+      "Dedicated sections for skills, projects, and contact",
+      "Modern, minimalistic UI with smooth transitions",
+      "Built with React and TypeScript for maintainability",
+    ],
   },
   {
     name: "Portfolio 2",
@@ -206,7 +343,22 @@ export const projects: ProjectType[] = [
     category: "portfolio",
     githubLink: "https://github.com/ratul544388/portfolio-2",
     deployedLink: "https://ratulcodes-2.vercel.app",
-    rating: 4,
+    technologies: [
+      "HTML",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React",
+      "TypeScript",
+    ],
+    description:
+      "Portfolio 2 is an upgraded animated portfolio website featuring elegant transitions and structured content to present my development capabilities effectively.",
+    features: [
+      "Animated transitions and reveal effects using Framer Motion",
+      "Mobile-first responsive layout",
+      "Project showcase with links to live demos and GitHub",
+      "Dark mode friendly UI",
+      "Built with React and TypeScript for a modern tech stack",
+    ],
   },
   {
     name: "Portfolio 3",
@@ -214,7 +366,22 @@ export const projects: ProjectType[] = [
     category: "portfolio",
     githubLink: "https://github.com/ratul544388/portfolio-3",
     deployedLink: "https://ratulcodes-3.vercel.app",
-    rating: 5,
+    technologies: [
+      "HTML",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React",
+      "TypeScript",
+    ],
+    description:
+      "Portfolio 3 is a polished and animated personal portfolio website designed to showcase my projects and skills with smooth transitions and a modern layout.",
+    features: [
+      "Smooth animations powered by Framer Motion",
+      "Clean and responsive design for desktop and mobile",
+      "Sections for skills, projects, and contact info",
+      "Built with React and TypeScript for scalable code",
+      "Easy navigation with an intuitive UI",
+    ],
   },
   {
     name: "Portfolio 4",
@@ -222,7 +389,22 @@ export const projects: ProjectType[] = [
     category: "portfolio",
     githubLink: "https://github.com/ratul544388/portfolio-4",
     deployedLink: "https://ratulcodes-4.vercel.app",
-    rating: 3.5,
+    technologies: [
+      "HTML",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React",
+      "TypeScript",
+    ],
+    description:
+      "Portfolio 4 features a sleek, animated design that highlights my development skills and projects with engaging motion effects and a user-friendly layout.",
+    features: [
+      "Engaging animations and scroll-triggered effects",
+      "Mobile-first responsive design",
+      "Project showcase with direct links",
+      "Clean codebase using React and TypeScript",
+      "Accessible and intuitive navigation",
+    ],
   },
   {
     name: "Portfolio 5",
@@ -231,7 +413,22 @@ export const projects: ProjectType[] = [
     githubLink: "https://github.com/ratul544388/portfolio-5",
     deployedLink:
       "https://ratulcodes-5.vercel.apphttps://ostad-assignment-1.onrender.com",
-    rating: 2.5,
+    technologies: [
+      "HTML",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React",
+      "TypeScript",
+    ],
+    description:
+      "Portfolio 5 is my latest animated portfolio project showcasing my development work with modern UI/UX patterns and smooth interactive animations.",
+    features: [
+      "Modern and animated UI with Framer Motion",
+      "Fully responsive across all devices",
+      "Comprehensive sections for projects and skills",
+      "Developed using React and TypeScript",
+      "Optimized for performance and accessibility",
+    ],
   },
   {
     name: "Calm Landing Page",
@@ -239,7 +436,22 @@ export const projects: ProjectType[] = [
     category: "landing page",
     githubLink: "https://github.com/ratul544388/calm-landing-page",
     deployedLink: "https://calm-landing-page.vercel.app/",
-    rating: 4,
+    technologies: [
+      "HTML",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React",
+      "TypeScript",
+    ],
+    description:
+      "Calm Landing Page is a clean, modern landing page designed to provide a peaceful and engaging introduction to a product or service.",
+    features: [
+      "Smooth animations using Framer Motion",
+      "Responsive design for all device sizes",
+      "Clear call-to-action sections",
+      "Minimalistic UI focused on user experience",
+      "Built with React and TypeScript for maintainability",
+    ],
   },
   {
     name: "University Landing Page",
@@ -248,7 +460,22 @@ export const projects: ProjectType[] = [
     githubLink: "https://github.com/ratul544388/university-landing-page",
     deployedLink:
       "https://university-landing-page-7jiet8en9-ratul544388.vercel.app/",
-    rating: 4,
+    technologies: [
+      "HTML",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React",
+      "TypeScript",
+    ],
+    description:
+      "University Landing Page is a professional and informative landing site designed to showcase a university’s offerings and campus information with elegant animations.",
+    features: [
+      "Animated content sections using Framer Motion",
+      "Mobile-friendly responsive layout",
+      "Detailed sections about courses and campus life",
+      "Easy navigation and clean UI design",
+      "Built with React and TypeScript for scalability",
+    ],
   },
   {
     name: "Grass Root Landing Page",
@@ -257,7 +484,22 @@ export const projects: ProjectType[] = [
     githubLink:
       "https://github.com/ratul544388/grass-root-farmers-landing-page",
     deployedLink: "https://grass-root-farmers-landing-page.vercel.app/",
-    rating: 4,
+    technologies: [
+      "HTML",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React",
+      "TypeScript",
+    ],
+    description:
+      "Grass Root Landing Page is a vibrant, engaging landing page focused on grassroots farmers and agricultural initiatives, designed with smooth animations and clear information hierarchy.",
+    features: [
+      "Dynamic animations via Framer Motion",
+      "Fully responsive across devices",
+      "Content focused on agriculture and farmer services",
+      "User-friendly interface with intuitive navigation",
+      "Developed using React and TypeScript",
+    ],
   },
   {
     name: "Car Booking App",
@@ -266,21 +508,56 @@ export const projects: ProjectType[] = [
     githubLink: "https://github.com/ratul544388/car-hub",
     deployedLink:
       "https://portfolio-two-sepia-49.vercel.app/https://car-hub-dusky-eta.vercel.app",
-    rating: 2,
+    technologies: ["HTML", "Tailwind CSS", "React", "JavaScript"],
+    description:
+      "Car Booking App allows users to browse and view car details fetched from an external API, providing a simple interface to explore available vehicles.",
+    features: [
+      "Fetches car data from a public API",
+      "Displays detailed information about each car",
+      "Clean and responsive UI built with React",
+      "Basic navigation and user interaction",
+      "Built as an early project to practice React fundamentals",
+    ],
   },
   {
     name: "Mern Note App",
     image: mernNoteAppImage,
+    category: "social media",
     githubLink: "https://github.com/ratul544388/mern-note-app",
     deployedLink: "https://mern-note-app-qyl8.onrender.com/",
-    rating: 2,
+    technologies: [
+      "HTML",
+      "Tailwind CSS",
+      "MongoDB",
+      "JavaScript",
+      "Node.js",
+      "Redux",
+    ],
+    description:
+      "Mern Note App is a simple note-taking application built with the MERN stack, allowing users to create, update, delete, and like notes.",
+    features: [
+      "CRUD operations for notes",
+      "User authentication and authorization",
+      "State management using Redux",
+      "Responsive design with Tailwind CSS",
+      "Built to learn full-stack development with MERN",
+    ],
   },
   {
     name: "Simple Projects",
     image: simpleProjectsImage,
     githubLink: "https://github.com/ratul544388/mini-projects",
     deployedLink: "https://mini-projects-zeta.vercel.app",
-    rating: 3.5,
+    technologies: ["HTML", "Tailwind CSS", "JavaScript", "React"],
+    description:
+      "Simple Projects is a collection of beginner-friendly mini applications and games such as ToDo List, Hangman, Country Capital Quiz, and Tic-Tac-Toe.",
+    features: [
+      "Multiple small games and utility apps",
+      "Practices core React concepts and JavaScript",
+      "Responsive and straightforward UI",
+      "Great for learning and experimentation",
+      "Includes popular beginner projects like Tic-Tac-Toe and Hangman",
+    ],
   },
 ];
 
@@ -405,37 +682,39 @@ export const experienceCardData = [
   },
 ] as const;
 
-
 export const timelineData = [
   {
     title: "Completed Higher Secondary Certificate (HSC)",
     date: "July 2021",
-    description: "Graduated from Sheikh Burhanuddin Post Graduate College, majoring in Science. Built a strong academic foundation in mathematics, physics, and computer science, developing problem-solving abilities and analytical skills that later fueled my passion for full-stack web development and modern software technologies.",
+    description:
+      "Graduated from Sheikh Burhanuddin Post Graduate College, majoring in Science. Built a strong academic foundation in mathematics, physics, and computer science, developing problem-solving abilities and analytical skills that later fueled my passion for full-stack web development and modern software technologies.",
   },
   {
     title: "Started BSc in Computer Science & Engineering",
     date: "Dec 2022",
-    description: "Began pursuing a Bachelor’s degree in Computer Science to deepen my knowledge of programming, data structures, algorithms, and software engineering principles. Focused on enhancing both theoretical understanding and practical experience in web development, database systems, and cloud-based solutions.",
+    description:
+      "Began pursuing a Bachelor’s degree in Computer Science to deepen my knowledge of programming, data structures, algorithms, and software engineering principles. Focused on enhancing both theoretical understanding and practical experience in web development, database systems, and cloud-based solutions.",
   },
   {
     title: "Began Full-Stack Web Development Journey",
     date: "Feb 2022",
-    description: "Started building full-stack web applications, mastering technologies like React, Next.js, TypeScript, Node.js, and MongoDB. Focused on creating scalable, responsive, and modern web apps while learning about API development, backend systems, authentication, and user-centered design principles.",
+    description:
+      "Started building full-stack web applications, mastering technologies like React, Next.js, TypeScript, Node.js, and MongoDB. Focused on creating scalable, responsive, and modern web apps while learning about API development, backend systems, authentication, and user-centered design principles.",
   },
   {
     title: "Developed Gym Management Website",
     date: "Mar 2024",
-    description: "Designed and built a complete gym management platform for Akash Fitness Studio. Implemented features for member registration, subscription management, revenue tracking, and personalized fitness plans using modern web technologies to improve business operations and user experience.",
+    description:
+      "Designed and built a complete gym management platform for Akash Fitness Studio. Implemented features for member registration, subscription management, revenue tracking, and personalized fitness plans using modern web technologies to improve business operations and user experience.",
   },
   {
     title: "Built Custom Food Ordering Website",
     date: "Sep 2024",
-    description: "Created a custom food ordering website for a local business, integrating real-time chat support, secure online payment systems, and an intuitive ordering process. Focused on delivering an engaging, mobile-responsive user experience and streamlined order management for the business.",
   },
   {
     title: "Designed Business Portfolio Website",
     date: "Jan 2025",
-    description: "Developed a modern, fully responsive portfolio website for a business to enhance its digital identity. Focused on clean UI/UX design, fast performance, SEO optimization, and scalability, helping the brand create a strong online presence and attract potential clients.",
+    description:
+      "Developed a modern, fully responsive portfolio website for a business to enhance its digital identity. Focused on clean UI/UX design, fast performance, SEO optimization, and scalability, helping the brand create a strong online presence and attract potential clients.",
   },
 ] as const;
-

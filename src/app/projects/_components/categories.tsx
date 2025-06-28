@@ -15,7 +15,7 @@ export const Categories = ({
     <WhileInView
       y={20}
       elem="ul"
-      className="mx-auto mt-12 flex w-fit flex-wrap justify-center gap-4 rounded-3xl border shadow-sm lg:rounded-full"
+      className="mx-auto mt-12 flex w-fit flex-wrap justify-center gap-4 shadow-sm"
     >
       {projectCategories.map((c, i) => {
         const isActive = c === activeCategory;

@@ -8,18 +8,15 @@ import { projects } from "@/constants";
 import { FaRocket } from "react-icons/fa";
 
 export const LatestProjects = () => {
-  const filteredProjects = projects
-    .slice(0, 6)
-    .sort((a, b) => b.rating - a.rating);
 
   return (
     <Container
       elem="section"
-      className="mt-20 flex max-w-[1000px] flex-col items-center"
+      className="mt-20 flex max-w-[1000px] w-full flex-col items-center"
     >
       <Heading label="Latest Projects" />
-      <ul className="mt-10 grid w-full gap-8 grid-cols-2 md:grid-cols-3">
-        {filteredProjects.map((project) => (
+      <ul className="w-full grid gap-5 mt-6">
+        {projects.slice(0, 4).map((project) => (
           <Project project={project} key={project.name} />
         ))}
       </ul>
