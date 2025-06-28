@@ -693,7 +693,7 @@ export const timelineData = [
     title: "Started BSc in Computer Science & Engineering",
     date: "Dec 2022",
     description:
-      "Began pursuing a Bachelor’s degree in Computer Science to deepen my knowledge of programming, data structures, algorithms, and software engineering principles. Focused on enhancing both theoretical understanding and practical experience in web development, database systems, and cloud-based solutions.",
+      "Began pursuing a Bachelor's degree in Computer Science to deepen my knowledge of programming, data structures, algorithms, and software engineering principles. Focused on enhancing both theoretical understanding and practical experience in web development, database systems, and cloud-based solutions.",
   },
   {
     title: "Began Full-Stack Web Development Journey",
@@ -710,6 +710,8 @@ export const timelineData = [
   {
     title: "Built Custom Food Ordering Website",
     date: "Sep 2024",
+    description:
+      "Developed a dynamic food ordering platform where users can browse various meals and drinks, customize their orders, and place them directly through the website. Focused on user-friendly UI, real-time order interactions, and seamless checkout experience.",
   },
   {
     title: "Designed Business Portfolio Website",
