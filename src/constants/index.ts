@@ -43,6 +43,8 @@ import simpleProjectsImage from "@/../public/projects/simple-projects.webp";
 import twitterCloneImage from "@/../public/projects/twitter-clone.webp";
 import universityLandingPageImage from "@/../public/projects/university-landing-page.webp";
 import wafflesImage from "@/../public/projects/waffles.webp";
+import serviceNow from "@/../public/projects/service-now.png";
+import workSphear from "@/../public/projects/work-sphear.png";
 import stackCardImageAnimation from "@/../public/stack-cards-images/animation.jpg";
 import stackCardImagebackend from "@/../public/stack-cards-images/backend.jpg";
 import stackCardImageFigma from "@/../public/stack-cards-images/figma.jpg";
@@ -312,6 +314,62 @@ export const projects: ProjectType[] = [
       "User-friendly booking process for patients",
       "Responsive and intuitive UI",
       "Backend integration using MongoDB and Prisma",
+    ],
+  },
+  {
+    name: "Service Now",
+    image: serviceNow,
+    category: "booking",
+    githubLink: "https://github.com/ratul544388/service-now-mern-stack",
+    deployedLink: "https://service-now-mern-stack-djhc.vercel.app",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "Framer Motion",
+      "Tanstack Query",
+      "Node.js",
+      "MongoDB",
+      "Prisma",
+    ],
+    description:
+      "Service Now is a full-stack MERN application that enables users to create, search, and book a wide range of custom services — from household needs to freelance gigs. The platform supports users and service providers with interactive dashboards, authentication, and smooth booking workflows.",
+    features: [
+      "Role-based access for users and service providers",
+      "Create, manage, and book user-generated services",
+      "Insightful dashboard with bookings and earnings data",
+      "Authentication using JWT and Google OAuth",
+      "Media upload integration",
+      "Animated and responsive UI",
+      "Date selection and form validation",
+      "Backend built with Prisma ORM and MongoDB",
+    ],
+  },
+  {
+    name: "WorkSphear",
+    image: workSphear,
+    category: "management",
+    githubLink: "https://github.com/ratul544388/work-sphear",
+    deployedLink: "https://work-sphear.vercel.app",
+    technologies: [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "ShadCN UI",
+      "Node.js",
+      "MongoDB",
+      "Stripe",
+    ],
+    description:
+      "WorkSphear is a full-featured employee and HR management platform designed to simplify organizational workflows. It offers role-based access for Admin, HR, and Employees to manage member enrollment, salary processing, and task tracking efficiently from a unified dashboard.",
+    features: [
+      "Role-based access control for Admin, HR, and Employees",
+      "Employee enrollment and profile management",
+      "Salary processing and payment integration",
+      "Task tracking and workload management",
+      "Secure authentication with JWT and Google Login",
+      "Interactive charts and dashboards with Recharts",
+      "Responsive and modern UI using Tailwind CSS and ShadCN UI",
     ],
   },
   {

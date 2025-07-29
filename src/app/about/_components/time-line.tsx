@@ -53,8 +53,8 @@ const TimelineItem = ({
         {/* Dot  */}
         <span
           className={cn(
-            "absolute top-0 -translate-y-[5px] left-1/2 -translate-x-1/2 z-10 size-[22px] rounded-full border-[5px] border-background bg-foreground",
-            index === 0 && "top-[58px] translate-y-0"
+            "absolute left-1/2 top-0 z-10 size-[22px] -translate-x-1/2 -translate-y-[5px] rounded-full border-[5px] border-background bg-foreground",
+            index === 0 && "top-[58px] translate-y-0",
           )}
         />
       </span>
